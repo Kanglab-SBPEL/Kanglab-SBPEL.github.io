@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T04:27:09.983Z",
+ "generated": "2026-09-08T10:55:43.867Z",
  "source": "notion",
  "counts": {
   "news": 4,
@@ -47,7 +47,7 @@
    "citation": "123:1518–1530",
    "doi": "10.1002/bit.70188",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -58,7 +58,7 @@
    "citation": "49:1353–1362",
    "doi": "10.1007/s00449-026-03326-6",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -69,7 +69,7 @@
    "citation": "94:106–120",
    "doi": "10.1016/j.nbt.2026.05.011",
    "url": "",
-   "tag": ""
+   "tag": "review"
   },
   {
    "type": "journal",
@@ -80,7 +80,7 @@
    "citation": "18",
    "doi": "10.1186/s13036-026-00731-z",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -91,7 +91,7 @@
    "citation": "16:1601691",
    "doi": "10.3389/fmicb.2025.1601691",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -102,7 +102,7 @@
    "citation": "90:57–66",
    "doi": "10.1016/j.ymben.2025.03.004",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -113,7 +113,7 @@
    "citation": "12:1396127",
    "doi": "10.3389/fbioe.2024.1396127",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -124,7 +124,7 @@
    "citation": "399:130641",
    "doi": "10.1016/j.biortech.2024.130641",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -135,7 +135,7 @@
    "citation": "211:108729",
    "doi": "10.1016/j.plaphy.2024.108729",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -146,7 +146,7 @@
    "citation": "18:56",
    "doi": "10.1186/s13036-024-00447-y",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -157,7 +157,7 @@
    "citation": "18:73",
    "doi": "10.1186/s13036-024-00473-w",
    "url": "",
-   "tag": ""
+   "tag": "review"
   },
   {
    "type": "journal",
@@ -168,7 +168,7 @@
    "citation": "16:113",
    "doi": "10.1186/s13068-023-02358-4",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -179,7 +179,7 @@
    "citation": "85:103031",
    "doi": "10.1016/j.copbio.2023.103031",
    "url": "",
-   "tag": ""
+   "tag": "review"
   },
   {
    "type": "journal",
@@ -190,7 +190,7 @@
    "citation": "70:12085–12094",
    "doi": "10.1021/acs.jafc.2c04251",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -201,7 +201,7 @@
    "citation": "17:e2100214",
    "doi": "10.1002/biot.202100214",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -212,7 +212,7 @@
    "citation": "340:125676",
    "doi": "10.1016/j.biortech.2021.125676",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -223,7 +223,7 @@
    "citation": "17:e2000431",
    "doi": "10.1002/biot.202000431",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -234,7 +234,7 @@
    "citation": "345:126529",
    "doi": "10.1016/j.biortech.2021.126529",
    "url": "",
-   "tag": ""
+   "tag": "review"
   },
   {
    "type": "journal",
@@ -245,7 +245,7 @@
    "citation": "30:1597–1606",
    "doi": "10.4014/jmb.2005.05048",
    "url": "",
-   "tag": ""
+   "tag": "research"
   },
   {
    "type": "journal",
@@ -256,7 +256,7 @@
    "citation": "104:1736–1745",
    "doi": "10.1111/tpj.15025",
    "url": "",
-   "tag": ""
+   "tag": "resource"
   }
  ]
 }
