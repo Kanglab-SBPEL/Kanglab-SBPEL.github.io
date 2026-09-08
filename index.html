@@ -121,8 +121,10 @@
   .member h4{margin:0 0 8px;font-size:15px;font-weight:700;}
   .member .role{font-size:12.5px;font-weight:700;margin:0;}
   .member p{margin:0;font-size:12.5px;color:var(--ink);line-height:1.5;}
-  .member .res span{display:block;}
-  .member .res span + span{margin-left:5.6em;}
+  .member .res{display:flex;gap:.35em;}
+  .member .res .lbl{flex:none;}
+  .member .res .vals{min-width:0;}
+  .member .res .vals span{display:block;}
 
   .roster{width:100%;border-collapse:collapse;margin-top:4px;}
   .roster td{padding:2px 0;font-size:13px;vertical-align:top;}
@@ -338,9 +340,9 @@
           '<div><h4>' + rich(m.name) + '</h4>' +
           '<p class="role">' + rich(m.role) + '</p>' +
           '<p>Email: ' + rich(m.email) + '</p>' +
-          '<p class="res">' + (m.research || []).map(function(x, i){
-             return '<span>' + (i === 0 ? 'Research: ' : '') + rich(x) + '</span>';
-           }).join('') + '</p></div></article>';
+          ((m.research || []).length ? '<p class="res"><span class="lbl">Research:</span><span class="vals">' +
+             m.research.map(function(x){ return '<span>' + rich(x) + '</span>'; }).join('') +
+           '</span></p>' : '') + '</div></article>';
       }).join('') + '</div></div>' +
       rosterBlock('Alumni', p.alumni) +
       rosterBlock('Former Lab Members', p.former);
@@ -356,13 +358,15 @@
   }
 
   function pagePublications(){
-    var kinds = [['journal','Journals'],['patent','Patents'],['conference','Conferences'],['book','Book chapters']];
+    var kinds = [['journal','Journal Publications'],['patent','Patents'],['conference','Conference Presentations'],['book','Book Chapters']];
+    var short = {journal:'Journals', patent:'Patents', conference:'Conferences', book:'Book chapters'};
     var present = kinds.filter(function(k){
       return PUBS.some(function(p){ return p.type === k[0]; });
     });
     if (!present.length) present = [['journal','Journals']];
     if (!present.some(function(k){ return k[0] === pubTab; })) pubTab = present[0][0];
 
+    var heading = (present.filter(function(k){ return k[0] === pubTab; })[0] || present[0])[1];
     var rows = PUBS.filter(function(p){ return p.type === pubTab; });
     if (filter) {
       var q = filter.toLowerCase();
@@ -403,11 +407,11 @@
 
     var tabs = '<div class="tabs" role="group" aria-label="Filter publications">' + present.map(function(k){
       return '<button type="button" data-tab="' + k[0] + '" aria-pressed="' +
-             String(k[0] === pubTab) + '">' + k[1] + '</button>';
+             String(k[0] === pubTab) + '">' + (short[k[0]] || k[1]) + '</button>';
     }).join('') + '</div>';
 
     return banner('publications', 'Publications') +
-      '<div class="band"><h2>Journal Publications</h2></div>' +
+      '<div class="band"><h2>' + esc(heading) + '</h2></div>' +
       '<div class="wrap">' +
         '<div class="pubbar">' + tabs +
           '<div class="pubmeta">' + rows.length + (rows.length === 1 ? ' entry' : ' entries') + '</div>' +
