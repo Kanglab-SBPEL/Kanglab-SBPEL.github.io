@@ -376,6 +376,8 @@
     }
     rows.sort(function(a, b){
       if ((Number(b.year)||0) !== (Number(a.year)||0)) return (Number(b.year)||0) - (Number(a.year)||0);
+      var ao = a.order == null ? 1e9 : Number(a.order), bo = b.order == null ? 1e9 : Number(b.order);
+      if (ao !== bo) return ao - bo;
       return String(a.title||'').localeCompare(String(b.title||''));
     });
 
