@@ -3,654 +3,484 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Synthetic Biology and BioProcess Engineering Laboratory (SBPEL), Department of Chemical Engineering, Kyung Hee University. Engineering yeast, microalgae and bacteria to convert CO2, methane and C1 substrates into fuels and chemicals.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,400;0,500;0,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<title>SBPEL &middot; Kang Lab at Kyung Hee University</title>
+<meta name="description" content="Synthetic Biology and BioProcess Engineering Lab (KANG Lab), Department of Chemical Engineering, Kyung Hee University.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap">
+<title>KANG LAB · Synthetic Biology and BioProcess Engineering Lab</title>
 <style>
   :root{
-    --ground:#F5F7F4; --surface:#FFFFFF; --surface-2:#EDF1EE;
-    --ink:#0E1A18; --text:#22302D; --muted:#5C6B67; --faint:#8A9793;
-    --rule:#D6DEDA; --rule-soft:#E6ECE8;
-    --accent:#12695B; --accent-deep:#0B443B; --accent-wash:#E1EEE9;
-    --signal:#A9761A; --signal-wash:#F6EEDC;
-    --shadow:0 1px 2px rgba(14,26,24,.05), 0 8px 24px -16px rgba(14,26,24,.18);
-    --display:"Newsreader", ui-serif, Georgia, "Times New Roman", serif;
-    --body:"IBM Plex Sans", ui-sans-serif, system-ui, "Helvetica Neue", Arial, sans-serif;
-    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    --pad:clamp(20px, 5vw, 64px);
+    --bar:#262626;
+    --green:#4a7a2e;
+    --band:#eeeeee;
+    --ink:#202124;
+    --grey:#5f6368;
+    --faint:#9aa0a6;
+    --rule:#dadce0;
+    --red:#a83226;
+    --sans:"Roboto", Arial, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    --serif:"Playfair Display", "Times New Roman", serif;
+    --body-serif:"Lora", Georgia, "Times New Roman", serif;
+    --wrap:810px;
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --ground:#0B1413; --surface:#111D1B; --surface-2:#162523;
-      --ink:#EAF0ED; --text:#D3DCD8; --muted:#93A29D; --faint:#728079;
-      --rule:#25332F; --rule-soft:#1C2A27;
-      --accent:#4EBBA4; --accent-deep:#8AD6C4; --accent-wash:#122A26;
-      --signal:#D6A648; --signal-wash:#2A2113;
-      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
-    }
-  }
-  :root[data-theme="dark"]{
-    --ground:#0B1413; --surface:#111D1B; --surface-2:#162523;
-    --ink:#EAF0ED; --text:#D3DCD8; --muted:#93A29D; --faint:#728079;
-    --rule:#25332F; --rule-soft:#1C2A27;
-    --accent:#4EBBA4; --accent-deep:#8AD6C4; --accent-wash:#122A26;
-    --signal:#D6A648; --signal-wash:#2A2113;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
-  }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--ground);color:var(--text);font-family:var(--body);
-       font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
-  img{max-width:100%;}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none!important;transition:none!important;} }
-  a{color:var(--accent);text-decoration:none;}
-  a:hover{text-decoration:underline;text-underline-offset:3px;}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
-  h1,h2,h3,h4{font-family:var(--display);color:var(--ink);text-wrap:balance;font-weight:400;margin:0;}
-  i .r{font-style:normal;}
-  .wrap{max-width:1120px;margin:0 auto;padding-inline:var(--pad);}
-  section{scroll-margin-top:70px;}
-  .band{padding-block:clamp(48px,6vw,80px);border-top:1px solid var(--rule);}
-  .band.alt{background:var(--surface-2);}
-  .sec-head{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:8px 40px;
-            align-items:end;margin-bottom:clamp(26px,3.5vw,42px);}
-  @media (max-width:760px){ .sec-head{grid-template-columns:1fr;} }
-  .sec-head h2{font-size:clamp(24px,3vw,34px);letter-spacing:-.012em;}
-  .sec-head p{margin:0;color:var(--muted);font-size:15px;max-width:54ch;}
-  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-           color:var(--accent);margin:0 0 18px;}
+  body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6;
+       -webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:var(--green);}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{transition:none!important;} }
 
-  /* nav */
-  .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);
-          backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-soft);}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:60px;}
-  .mark{display:flex;align-items:baseline;gap:10px;}
-  .mark b{font-family:var(--mono);font-weight:500;font-size:15px;letter-spacing:.14em;color:var(--ink);}
-  .mark span{font-size:12.5px;color:var(--faint);}
-  .navlinks{display:flex;gap:20px;list-style:none;margin:0;padding:0;}
-  .navlinks a{font-size:13.5px;color:var(--muted);padding-block:6px;border-bottom:1.5px solid transparent;}
-  .navlinks a:hover{color:var(--ink);text-decoration:none;}
-  .navlinks a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent);}
-  @media (max-width:820px){ .navlinks{display:none;} }
+  /* ---------- header ---------- */
+  .bar{position:sticky;top:0;z-index:60;background:var(--bar);}
+  .bar-in{max-width:1600px;margin:0 auto;height:48px;padding:0 18px;display:flex;align-items:center;
+          justify-content:space-between;gap:20px;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand .mark{width:30px;height:30px;object-fit:contain;}
+  .brand .mark-ph{width:30px;height:30px;border:1px dashed rgba(255,255,255,.4);border-radius:3px;}
+  .brand b{color:#fff;font-size:14.5px;font-weight:700;letter-spacing:.05em;}
+  nav.top{display:flex;align-items:center;gap:20px;}
+  nav.top a{color:rgba(255,255,255,.88);font-size:13.5px;text-decoration:none;padding:4px 2px;}
+  nav.top a:hover{color:#fff;}
+  nav.top a[aria-current="page"]{color:#fff;font-weight:700;}
+  .searchbtn{background:none;border:0;padding:4px;cursor:pointer;line-height:0;}
+  .searchbtn svg{width:17px;height:17px;fill:rgba(255,255,255,.88);}
+  .searchbox{display:none;background:#1b1b1b;border-top:1px solid #333;}
+  .searchbox.open{display:block;}
+  .searchbox input{width:100%;max-width:1600px;margin:0 auto;display:block;background:transparent;border:0;
+                   color:#fff;font-family:var(--sans);font-size:14px;padding:12px 20px;}
+  .searchbox input::placeholder{color:#8a8a8a;}
+  @media (max-width:760px){ nav.top{gap:12px;} nav.top a{font-size:12px;} .brand b{font-size:12.5px;} }
 
-  /* hero */
-  .hero{padding-block:clamp(40px,7vw,82px) clamp(34px,5vw,58px);}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
-             gap:clamp(32px,5vw,72px);align-items:start;}
-  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
-  .hero h1{font-size:clamp(30px,4.4vw,50px);line-height:1.13;letter-spacing:-.017em;margin-bottom:20px;max-width:21ch;}
-  .hero h1 em{font-style:italic;color:var(--accent-deep);}
-  .labname{font-family:var(--display);font-size:17px;color:var(--muted);margin:0 0 18px;font-style:italic;}
-  .lede{font-size:17px;color:var(--muted);max-width:56ch;margin:0 0 26px;}
-  .pi-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;font-size:14px;
-           color:var(--muted);padding-top:20px;border-top:1px solid var(--rule);}
-  .pi-line strong{color:var(--ink);font-weight:600;}
+  /* ---------- banner ---------- */
+  .banner{position:relative;height:200px;display:grid;place-items:center;overflow:hidden;
+          background:#3c4a3a;}
+  .banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .banner::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.38);}
+  .banner .ph{position:absolute;inset:0;background:
+      linear-gradient(135deg,#44523f 0%,#2f3a2c 55%,#3d4a38 100%);}
+  .banner h1{position:relative;z-index:2;margin:0;color:#fff;text-align:center;padding:0 20px;
+             text-shadow:0 1px 3px rgba(0,0,0,.45);}
+  .banner.home h1{font-family:var(--sans);font-weight:700;font-size:clamp(20px,3.2vw,34px);}
+  .banner.sub h1{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.4vw,44px);}
+  .banner .phlabel{position:absolute;z-index:3;bottom:8px;right:12px;font-family:ui-monospace,monospace;
+                   font-size:9.5px;letter-spacing:.12em;color:rgba(255,255,255,.5);}
 
-  .strains{background:var(--surface);border:1px solid var(--rule);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;}
-  .strains h2{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;
-              color:var(--faint);padding:14px 18px;border-bottom:1px solid var(--rule-soft);}
-  .strains ul{list-style:none;margin:0;padding:0;}
-  .strains li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:baseline;
-              padding:11px 18px;border-bottom:1px solid var(--rule-soft);}
-  .strains li:last-child{border-bottom:0;}
-  .strains i{font-family:var(--display);font-style:italic;font-size:15.5px;color:var(--ink);}
-  .strains small{grid-column:1;font-size:12px;color:var(--faint);}
-  .strains .feed{grid-row:span 2;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--accent);
-                 background:var(--accent-wash);padding:3px 7px;border-radius:2px;white-space:nowrap;}
+  /* ---------- bands & wrap ---------- */
+  .band{background:var(--band);padding:24px 20px;}
+  .band h2{margin:0;text-align:center;font-family:var(--serif);font-weight:700;color:var(--green);
+           font-size:clamp(21px,2.6vw,27px);}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:30px 20px 34px;}
+  .wrap.wide{max-width:1000px;}
 
-  /* research */
-  .themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);}
-  @media (max-width:820px){ .themes{grid-template-columns:1fr;} }
-  .theme{background:var(--surface);padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:13px;}
-  .theme.wide{grid-column:1/-1;}
-  @media (max-width:820px){ .theme.wide{grid-column:auto;} }
-  .theme .host{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin:0;}
-  .theme h3{font-size:20.5px;line-height:1.25;letter-spacing:-.008em;}
-  .theme p{margin:0;font-size:14.5px;color:var(--muted);}
-  .flux{font-family:var(--mono);font-size:12.5px;color:var(--ink);display:flex;flex-wrap:wrap;align-items:center;gap:8px;
-        padding:10px 12px;background:var(--accent-wash);border-left:2px solid var(--accent);}
-  .flux span{color:var(--accent);}
-  .marks{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;}
-  .chip{font-family:var(--mono);font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--text);
-        border:1px solid var(--rule);border-radius:2px;padding:4px 8px;background:var(--ground);}
-  .chip b{color:var(--ink);font-weight:500;}
-  .methods{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;padding-top:20px;border-top:1px solid var(--rule);}
-  .methods dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:3px;}
-  .methods dd{margin:0;color:var(--text);font-size:14px;}
-  .methods > div{min-width:180px;flex:1;}
+  /* ---------- home ---------- */
+  .intro{font-size:14px;font-weight:700;line-height:1.62;text-align:justify;margin:0 0 26px;}
+  .contacts{text-align:center;font-weight:700;font-size:14px;line-height:1.85;}
+  .contacts a{text-decoration:underline;}
 
-  /* publications */
-  .pubbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
-          margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--rule);}
+  /* ---------- figures & placeholders ---------- */
+  figure{margin:0 0 8px;}
+  .ph-box{background:#f4f4f4;border:1px solid var(--rule);border-radius:2px;display:grid;place-items:center;
+          color:var(--faint);font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.14em;
+          text-transform:uppercase;}
+  .ph-fig{aspect-ratio:16/6;}
+  .ph-flow{aspect-ratio:16/3;}
+  .ph-photo{aspect-ratio:3/4;}
+  .ph-sq{aspect-ratio:4/3;}
+
+  /* ---------- research ---------- */
+  .ov-sub{text-align:center;font-family:var(--body-serif);font-style:italic;color:var(--green);
+          font-size:clamp(15px,2vw,19px);line-height:1.5;margin:0 0 26px;}
+  .r-body{font-family:var(--body-serif);font-size:15px;line-height:1.78;text-align:justify;}
+  .r-body sub, .r-body sup{line-height:0;}
+  .topic{padding-top:30px;margin-top:30px;border-top:1px solid var(--rule);}
+  .topic > h3{margin:0 0 22px;font-family:var(--body-serif);font-style:italic;font-weight:700;
+              color:var(--green);font-size:16.5px;line-height:1.4;display:flex;gap:10px;}
+  .topic > h3::before{content:"▪";color:var(--ink);font-style:normal;font-size:11px;line-height:1.9;}
+  .topic .side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:center;}
+  @media (max-width:800px){ .topic .side{grid-template-columns:1fr;} }
+
+  /* ---------- people ---------- */
+  .pi{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start;}
+  @media (max-width:760px){ .pi{grid-template-columns:1fr;} .pi .shot{max-width:250px;margin:0 auto;} }
+  .pi .who{text-align:center;}
+  .pi .who h3{margin:0;font-size:20px;font-weight:700;}
+  .pi .who .rank{font-weight:700;font-size:15px;margin:2px 0 14px;}
+  .pi .who .affil{font-weight:700;font-size:13.5px;margin:0;}
+  .pi .who .addr{font-size:13.5px;margin:0 0 14px;}
+  .pi .who .cont{font-size:13.5px;margin:0 0 6px;}
+  .pi .who .links{font-weight:700;font-size:13.5px;margin:0 0 16px;}
+  .pi .who .links a{text-decoration:underline;}
+  .pi ul{margin:0;padding:0;list-style:none;text-align:left;}
+  .pi ul li{font-weight:700;font-size:13px;line-height:1.75;display:flex;gap:9px;}
+  .pi ul li::before{content:"▪";color:var(--ink);font-size:10px;line-height:1.9;}
+
+  .members{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 34px;margin-top:44px;}
+  @media (max-width:700px){ .members{grid-template-columns:1fr;} }
+  .member{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;align-items:start;}
+  .member .shot{width:110px;}
+  .member h4{margin:0 0 8px;font-size:15px;font-weight:700;}
+  .member .role{font-size:12.5px;font-weight:700;margin:0;}
+  .member p{margin:0;font-size:12.5px;color:var(--ink);line-height:1.5;}
+  .member .res span{display:block;}
+  .member .res span + span{margin-left:5.6em;}
+
+  .roster{width:100%;border-collapse:collapse;margin-top:4px;}
+  .roster td{padding:2px 0;font-size:13px;vertical-align:top;}
+  .roster td.n{font-weight:700;white-space:nowrap;padding-right:24px;}
+  .roster td.i{font-weight:700;font-size:12px;padding-top:4px;}
+
+  /* ---------- publications (year-rail style) ---------- */
+  .pubbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
+          margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--rule);}
   .tabs{display:flex;gap:6px;}
-  .tabs button{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
-               background:transparent;border:1px solid var(--rule);color:var(--muted);
-               padding:6px 12px;border-radius:2px;cursor:pointer;}
+  .tabs button{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+               background:transparent;border:1px solid var(--rule);color:var(--grey);
+               padding:6px 11px;border-radius:2px;cursor:pointer;}
   .tabs button:hover{color:var(--ink);border-color:var(--faint);}
-  .tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface);}
-  :root[data-theme="dark"] .tabs button[aria-pressed="true"]{color:var(--ground);}
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tabs button[aria-pressed="true"]{color:var(--ground);} }
-  .pubmeta{font-family:var(--mono);font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums;}
-  .pubyear{display:grid;grid-template-columns:76px minmax(0,1fr);gap:0 28px;}
-  @media (max-width:640px){ .pubyear{grid-template-columns:1fr;gap:6px;} }
-  .yr{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--faint);letter-spacing:.06em;padding-top:18px;}
+  .tabs button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff;}
+  .pubmeta{font-family:ui-monospace,monospace;font-size:11px;color:var(--faint);
+           font-variant-numeric:tabular-nums;}
+  .pubnote{font-size:12.5px;color:var(--grey);margin:18px 0 0;}
+  .pubyear{display:grid;grid-template-columns:70px minmax(0,1fr);gap:0 26px;}
+  @media (max-width:640px){ .pubyear{grid-template-columns:1fr;gap:4px;} }
+  .pubyear .yr{font-family:ui-monospace,monospace;font-size:12.5px;color:var(--faint);
+               letter-spacing:.06em;font-variant-numeric:tabular-nums;padding-top:17px;}
   .pubyear ol{list-style:none;margin:0;padding:0;}
-  .pubyear li{padding:15px 0;border-top:1px solid var(--rule-soft);}
+  .pubyear li{padding:14px 0;border-top:1px solid #ececec;}
   .pubyear li:first-child{border-top:1px solid var(--rule);}
-  .pub-t{display:block;color:var(--ink);font-size:16px;font-family:var(--display);line-height:1.35;margin-bottom:5px;}
-  .pub-a{font-size:13.5px;color:var(--muted);}
-  .pub-a b{color:var(--text);font-weight:600;}
-  .pub-m{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-top:6px;font-size:12.5px;color:var(--faint);}
-  .pub-m em{font-style:normal;color:var(--signal);font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;}
-  .pub-m .jr{font-family:var(--display);font-style:italic;font-size:14px;color:var(--text);}
-  .doi{font-family:var(--mono);font-size:11.5px;}
-  .legend{margin-top:24px;font-size:12.5px;color:var(--faint);display:flex;flex-wrap:wrap;gap:6px 20px;}
-  .loading{padding:40px 0;color:var(--faint);font-family:var(--mono);font-size:13px;}
+  .pub-t{display:block;font-family:var(--body-serif);font-size:15.5px;line-height:1.4;color:var(--ink);
+         text-decoration:none;margin-bottom:5px;}
+  a.pub-t:hover{color:var(--green);text-decoration:underline;}
+  .pub-a{font-size:13px;color:var(--grey);}
+  .pub-a b{color:var(--ink);font-weight:700;}
+  .pub-m{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;margin-top:5px;
+         font-size:12.5px;color:var(--faint);}
+  .pub-m .jr{font-family:var(--body-serif);font-style:italic;font-size:13.5px;color:var(--ink);}
+  .pub-m em{font-style:normal;color:#a9761a;font-family:ui-monospace,monospace;font-size:10.5px;
+            letter-spacing:.1em;text-transform:uppercase;}
+  .pub-m .doi{font-family:ui-monospace,monospace;font-size:11px;}
+  .pubempty{color:var(--grey);font-size:13px;}
 
-  /* people */
-  .people{display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start;}
-  @media (max-width:880px){ .people{grid-template-columns:1fr;} }
-  .pi{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:26px;box-shadow:var(--shadow);}
-  .pi .role{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;}
-  .pi h3{font-size:24px;letter-spacing:-.01em;margin-bottom:2px;}
-  .pi .han{font-size:14px;color:var(--faint);margin:0 0 18px;}
-  .cv{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-direction:column;}
-  .cv li{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:7px 0;font-size:13.5px;
-         border-top:1px solid var(--rule-soft);}
-  .cv li:first-child{border-top:0;}
-  .cv time{font-family:var(--mono);font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums;padding-top:2px;}
-  .cv span{color:var(--text);}
-  .cv b{font-weight:600;color:var(--ink);}
-  .pi .links{display:flex;flex-wrap:wrap;gap:8px;padding-top:16px;border-top:1px solid var(--rule-soft);}
-  .pi .links a{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);padding:5px 9px;border-radius:2px;color:var(--text);}
-  .pi .links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+  /* ---------- gallery ---------- */
+  .gitem{padding:28px 0;border-bottom:1px solid var(--rule);}
+  .gitem:last-child{border-bottom:0;}
+  .gitem .row{display:grid;gap:24px;align-items:start;}
+  .gitem.left .row{grid-template-columns:minmax(0,2fr) minmax(0,1fr);}
+  .gitem.center .row{grid-template-columns:1fr;}
+  @media (max-width:800px){ .gitem.left .row{grid-template-columns:1fr;} }
+  .gshots{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+  .gitem h3{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:20px;}
+  .gitem .yr{font-family:var(--serif);font-weight:700;font-size:20px;margin:0;}
+  .gitem .ttl{color:var(--red);}
+  .gitem p{font-size:13.5px;line-height:1.7;margin:8px 0 0;}
+  .gitem.center .cap{text-align:center;margin-bottom:16px;}
 
-  .roster h3{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;
-             color:var(--faint);margin-bottom:12px;}
-  .roster + .roster{margin-top:30px;}
-  .ptable{width:100%;border-collapse:collapse;font-size:14px;}
-  .ptable th{text-align:left;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.12em;
-             text-transform:uppercase;color:var(--faint);padding:0 14px 8px 0;border-bottom:1px solid var(--rule);}
-  .ptable td{padding:11px 14px 11px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;color:var(--muted);}
-  .ptable td:first-child{color:var(--ink);font-family:var(--display);font-size:16px;white-space:nowrap;}
-  .ptable .em{font-family:var(--mono);font-size:11.5px;word-break:break-all;}
-  .tscroll{overflow-x:auto;}
-  .alum{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);}
-  .alum div{background:var(--surface);padding:13px 15px;}
-  .alum b{font-family:var(--display);font-size:16px;font-weight:400;color:var(--ink);display:block;}
-  .alum span{font-size:12px;color:var(--faint);font-family:var(--mono);}
-
-  /* news + gallery */
-  .feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:20px;}
-  .card{background:var(--surface);border:1px solid var(--rule);border-radius:3px;overflow:hidden;
-        display:flex;flex-direction:column;box-shadow:var(--shadow);}
-  .card .shot{aspect-ratio:4/3;background:var(--accent-wash);display:grid;place-items:center;border-bottom:1px solid var(--rule-soft);}
-  .card .shot img{width:100%;height:100%;object-fit:cover;display:block;}
-  .card .shot .ph{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);opacity:.65;}
-  .card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1;}
-  .card time{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint);font-variant-numeric:tabular-nums;}
-  .card h3{font-size:17px;line-height:1.3;}
-  .card p{margin:0;font-size:13.5px;color:var(--muted);}
-  .card .more{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:11.5px;}
-
-  /* join + contact */
-  .two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(30px,4.5vw,60px);align-items:start;}
-  @media (max-width:900px){ .two{grid-template-columns:1fr;} }
-  .join{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--signal);padding:26px;box-shadow:var(--shadow);}
-  .join h3{font-size:22px;margin-bottom:12px;}
-  .join p{font-size:14.5px;color:var(--muted);margin:0 0 16px;}
-  .join ul{margin:0 0 18px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;}
-  .join li{display:grid;grid-template-columns:16px 1fr;gap:10px;color:var(--text);}
-  .join li::before{content:"+";font-family:var(--mono);color:var(--signal);}
-  .cta{display:inline-block;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;background:var(--accent);
-       color:#fff;padding:10px 16px;border-radius:2px;}
-  .cta:hover{background:var(--accent-deep);text-decoration:none;}
-  .contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px;font-size:14.5px;}
-  .contact dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);padding-top:4px;}
-  .contact dd{margin:0;color:var(--text);}
-
-  footer{border-top:1px solid var(--rule);padding-block:34px 46px;background:var(--surface-2);}
-  .foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;}
-  .foot h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:8px;}
-  .foot p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7;}
-  .foot-b{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--faint);
-          display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;}
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--rule);}
+  .foot{max-width:var(--wrap);margin:0 auto;padding:24px 20px 40px;display:flex;align-items:flex-end;
+        justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .foot p{margin:0;font-size:11px;line-height:1.6;color:#3c4043;}
+  .foot .khu{width:250px;}
+  .foot .khu .ph-box{aspect-ratio:5/1.4;}
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap">
-    <div class="mark"><b>SBPEL</b><span>Kyung Hee University</span></div>
-    <nav aria-label="Sections">
-      <ul class="navlinks">
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#home" aria-label="KANG LAB home">
+      <span id="brandmark"></span>
+      <b id="brandname">KANG LAB</b>
+    </a>
+    <nav class="top" id="topnav" aria-label="Pages"></nav>
+  </div>
+  <div class="searchbox" id="searchbox">
+    <input type="search" id="searchinput" placeholder="Search publications…" aria-label="Search publications">
   </div>
 </header>
 
-<main>
-  <section class="hero wrap" id="home">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Department of Chemical Engineering &middot; Kyung Hee University</p>
-        <h1>Engineering microorganisms to turn <em>waste carbon</em> into fuels, chemicals, and nutraceuticals.</h1>
-        <p class="labname">Synthetic Biology and BioProcess Engineering Laboratory</p>
-        <p class="lede">We build yeast, microalgae, and bacteria into production platforms for sustainable biomanufacturing &mdash; combining pathway design, genome engineering, and fermentation to convert CO<sub>2</sub>, methane, methanol, and lignocellulosic sugars into value-added products.</p>
-        <div class="pi-line">
-          <span><strong>Nam Kyu Kang, Ph.D.</strong></span>
-          <span>Assistant Professor, Chemical Engineering</span>
-          <span><a href="mailto:nkkang@khu.ac.kr">nkkang@khu.ac.kr</a></span>
-        </div>
-      </div>
-      <div class="strains">
-        <h2>Platform organisms</h2>
-        <ul>
-          <li><i>Komagataella phaffii</i><span class="feed">methanol</span><small>Methylotrophic yeast &middot; C1 chassis</small></li>
-          <li><i>Methanotrophs</i><span class="feed">methane</span><small>C1 assimilation &middot; gas fermentation</small></li>
-          <li><i>Nannochloropsis salina</i><span class="feed">CO&#8322;</span><small>Oleaginous microalga &middot; EPA, lipids</small></li>
-          <li><i>Chlamydomonas reinhardtii</i><span class="feed">CO&#8322;</span><small>Green alga &middot; glycolate secretion</small></li>
-          <li><i>Saccharomyces cerevisiae</i><span class="feed">xylose</span><small>Yeast &middot; organic acids, lipids</small></li>
-          <li><i>Issatchenkia orientalis</i><span class="feed">hydrolysate</span><small>Acid-tolerant yeast &middot; low-pH fermentation</small></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="research" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Research</h2>
-        <p>Five programs, one through-line: take a carbon source nobody wants, and engineer a cell that turns it into something worth selling.</p>
-      </div>
-
-      <div class="themes">
-        <article class="theme wide">
-          <p class="host">Foundational platform</p>
-          <h3>Synthetic biology of diverse microorganisms</h3>
-          <p>Synthetic biology is a multidisciplinary field for creating microorganisms with a purpose. We develop the genetic engineering techniques that make non-conventional hosts tractable &mdash; CRISPR/Cas9 editing, Golden Gate cloning, safe-harbor knock-in, and in&nbsp;vivo DNA assembly &mdash; and pair them with high-throughput screening so that engineered strains can be obtained efficiently rather than one at a time.</p>
-          <div class="flux">design <span>&rarr;</span> build <span>&rarr;</span> test <span>&rarr;</span> learn</div>
-          <div class="marks">
-            <span class="chip">integration efficiency <b>15.3% &rarr; 68.1%</b></span>
-            <span class="chip">nine-fragment assembly <b>86.5%</b></span>
-            <span class="chip">FACS-based hotspot screening</span>
-          </div>
-        </article>
-
-        <article class="theme">
-          <p class="host">Nannochloropsis &middot; Chlamydomonas &middot; Chlorella</p>
-          <h3>Value-added products from CO<sub>2</sub> using photosynthetic microorganisms</h3>
-          <p>Microalgae fix CO<sub>2</sub> directly. We manipulate the carbon concentrating mechanism and CO<sub>2</sub> fixation pathways to push carbon toward lipids, omega-3 fatty acids, and carotenoids, then combine batch, semi-batch, and continuous cultivation with controlled stress to hold productivity and quality together.</p>
-          <div class="flux">CO&#8322; <span>&rarr;</span> Calvin cycle <span>&rarr;</span> TAG, EPA, carotenoids</div>
-          <div class="marks">
-            <span class="chip">lipid productivity <b>+71%</b></span>
-            <span class="chip">EPA <b>14.4</b> mg L<sup>&minus;1</sup> d<sup>&minus;1</sup></span>
-          </div>
-        </article>
-
-        <article class="theme">
-          <p class="host">Saccharomyces &middot; Issatchenkia</p>
-          <h3>Value-added products from lignocellulosic biomass using yeast</h3>
-          <p>Lignocellulosic hydrolysate is roughly 70% glucose and 30% xylose, and yeast will not eat both at once. We engineer sugar transport and central metabolism to break glucose repression, exploit acid tolerance to ferment without pH adjustment, and use genome-scale modeling and metabolic reconstruction to keep the process economically viable.</p>
-          <div class="flux">glucose + xylose <span>&rarr;</span> malate, lactate, fatty acids</div>
-          <div class="marks">
-            <span class="chip">malic acid <b>61.2</b> g L<sup>&minus;1</sup></span>
-            <span class="chip">lactic acid <b>67</b> g L<sup>&minus;1</sup>, self-buffering</span>
-          </div>
-        </article>
-
-        <article class="theme">
-          <p class="host">Algal&ndash;bacterial consortia</p>
-          <h3>Integrated bioprocesses for diverse products from CO<sub>2</sub></h3>
-          <p>A single strain rarely does both jobs well. We design modular co-cultures that pair a photosynthetic partner with bacteria or yeast, splitting a pathway across organisms: a photorespiration mutant of <i>C.&nbsp;reinhardtii</i> secretes glycolic acid from CO<sub>2</sub>, and the heterotrophic module converts it into the actual product in a two-stage continuous system.</p>
-          <div class="flux">CO&#8322; <span>&rarr;</span> glycolate <span>&rarr;</span> lycopene, protein</div>
-          <div class="marks">
-            <span class="chip">lycopene <b>6.3</b> &micro;g L<sup>&minus;1</sup> h<sup>&minus;1</sup></span>
-            <span class="chip">two-stage continuous culture</span>
-          </div>
-        </article>
-
-        <article class="theme">
-          <p class="host">Methanotrophs &middot; Komagataella phaffii</p>
-          <h3>Methanotrophs and methylotrophic yeast for C1 chemicals</h3>
-          <p>Methane and methanol are abundant one-carbon feedstocks, but their hosts pay for them in toxicity, redox imbalance, and carbon lost to dissimilation. We engineer C1 assimilation pathways in methanotrophs and methylotrophic yeast, mitigate formaldehyde and oxidative stress, and redirect the pyruvate node toward secreted products.</p>
-          <div class="flux">CH&#8324;, methanol <span>&rarr;</span> formaldehyde <span>&rarr;</span> lactate, terpenoids</div>
-          <div class="marks">
-            <span class="chip"><b>63.8</b> mg lactate / g methanol</span>
-            <span class="chip">synthetic methylotrophy</span>
-          </div>
-        </article>
-      </div>
-
-      <dl class="methods">
-        <div><dt>Strain engineering</dt><dd>CRISPR/Cas9 multiplex editing, Golden Gate cloning, in&nbsp;vivo DNA assembly, safe-harbor knock-in, RNAi, transcription-factor engineering</dd></div>
-        <div><dt>Systems analysis</dt><dd>RNA-seq and transcriptome profiling, metabolomics, genome-scale metabolic modeling, techno-economic analysis</dd></div>
-        <div><dt>Bioprocess</dt><dd>Fed-batch and continuous fermentation, photobioreactor cultivation, gas fermentation, FACS screening, FAME and lipid analysis</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="publications" class="band alt">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Publications</h2>
-        <p>Maintained in Notion and synced to this page automatically. Lab members appear in bold.</p>
-      </div>
-
-      <div class="pubbar">
-        <div class="tabs" id="pubtabs" role="group" aria-label="Filter publications"></div>
-        <div class="pubmeta" id="pubmeta"></div>
-      </div>
-
-      <div id="publist"><p class="loading">Loading publications&hellip;</p></div>
-
-      <p class="legend">
-        <span><b>&dagger;</b>&nbsp; co-first author</span>
-        <span><b>*</b>&nbsp; corresponding author</span>
-        <span>A complete list is also available on <a href="https://scholar.google.com/citations?user=">Google Scholar</a>.</span>
-      </p>
-    </div>
-  </section>
-
-  <section id="people" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>People</h2>
-        <p>A chemical engineering group working across yeast, microalgae, methanotrophs, and bioprocess scale-up.</p>
-      </div>
-
-      <div class="people">
-        <div class="pi">
-          <p class="role">Principal investigator</p>
-          <h3>Nam Kyu Kang, Ph.D.</h3>
-          <p class="han">&#44053;&#45224;&#44508; &middot; Assistant Professor</p>
-          <ul class="cv">
-            <li><time>2022&ndash;</time><span><b>Assistant Professor</b><br>Chemical Engineering, Kyung Hee University</span></li>
-            <li><time>2018&ndash;2022</time><span><b>Postdoctoral Research Associate</b><br>University of Illinois Urbana&ndash;Champaign (IGB / CABBI)</span></li>
-            <li><time>2017&ndash;2018</time><span><b>Senior Researcher</b><br>Advanced Biomass R&amp;D Center, KAIST</span></li>
-            <li><time>2017</time><span><b>Ph.D.</b><br>Chemical and Biomolecular Engineering, KAIST</span></li>
-            <li><time>2012</time><span><b>B.S.</b><br>Chemical Engineering, Sungkyunkwan University</span></li>
-          </ul>
-          <div class="links">
-            <a href="mailto:nkkang@khu.ac.kr">nkkang@khu.ac.kr</a>
-            <a href="https://scholar.google.com/citations?user=">Google Scholar</a>
-            <a href="https://www.researchgate.net/">ResearchGate</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="roster">
-            <h3>Graduate researchers</h3>
-            <div class="tscroll">
-            <table class="ptable">
-              <thead><tr><th>Name</th><th>Research focus</th><th>Email</th></tr></thead>
-              <tbody>
-                <tr><td>Hyunjun Min</td><td>Microalgae engineering, yeast engineering &middot; <i>Lab manager</i></td><td class="em"><a href="mailto:hjmin0602@khu.ac.kr">hjmin0602@khu.ac.kr</a></td></tr>
-                <tr><td>Yejee Park</td><td>Yeast metabolic engineering, methanotroph engineering</td><td class="em"><a href="mailto:park75253@khu.ac.kr">park75253@khu.ac.kr</a></td></tr>
-                <tr><td>Daeun Lee</td><td>Yeast engineering</td><td class="em"><a href="mailto:0515lde@khu.ac.kr">0515lde@khu.ac.kr</a></td></tr>
-                <tr><td>Jiwoo Kwon</td><td>Yeast engineering, methanotroph engineering</td><td class="em"><a href="mailto:kjwoo6737@khu.ac.kr">kjwoo6737@khu.ac.kr</a></td></tr>
-                <tr><td>Seunghyun Kim</td><td>Yeast engineering</td><td class="em"><a href="mailto:lej12131213@khu.ac.kr">lej12131213@khu.ac.kr</a></td></tr>
-                <tr><td>Ayoung Kim</td><td>Yeast engineering, genome editing</td><td class="em"><a href="mailto:ayoung@khu.ac.kr">ayoung@khu.ac.kr</a></td></tr>
-                <tr><td>Youngrak Jang</td><td>Microalgae engineering</td><td class="em"><a href="mailto:jang03141@khu.ac.kr">jang03141@khu.ac.kr</a></td></tr>
-              </tbody>
-            </table>
-            </div>
-          </div>
-
-          <div class="roster">
-            <h3>Undergraduate researchers</h3>
-            <div class="tscroll">
-            <table class="ptable">
-              <thead><tr><th>Name</th><th>Research focus</th><th>Email</th></tr></thead>
-              <tbody>
-                <tr><td>Yeseul Nam</td><td>Yeast engineering</td><td class="em"><a href="mailto:dptmf7@khu.ac.kr">dptmf7@khu.ac.kr</a></td></tr>
-                <tr><td>Yeonju Tak</td><td>Yeast engineering</td><td class="em"><a href="mailto:takyj0902@khu.ac.kr">takyj0902@khu.ac.kr</a></td></tr>
-                <tr><td>Junseong Kim</td><td>Yeast engineering</td><td class="em"><a href="mailto:kjunii02@khu.ac.kr">kjunii02@khu.ac.kr</a></td></tr>
-                <tr><td>Hyungjun Park</td><td>Yeast engineering</td><td class="em"><a href="mailto:qkrgudwns222@gmail.com">qkrgudwns222@gmail.com</a></td></tr>
-              </tbody>
-            </table>
-            </div>
-          </div>
-
-          <div class="roster">
-            <h3>Alumni</h3>
-            <div class="alum">
-              <div><b>Yejin Lin</b><span>M.S. 2023&ndash;2026 &middot; Medytox</span></div>
-              <div><b>Yujung Choi</b><span>M.S. 2023&ndash;2026</span></div>
-              <div><b>Yejee Park</b><span>M.S. 2023&ndash;2026 &middot; KHU researcher</span></div>
-            </div>
-          </div>
-
-          <div class="roster">
-            <h3>Collaborators</h3>
-            <p style="font-size:14px;color:var(--muted);line-height:1.9;margin:0;">
-              Jeong Chan Joo &middot; Eun Yeol Lee (Kyung Hee University) &nbsp;&bull;&nbsp;
-              Hyun Gi Koh (Hongik University) &nbsp;&bull;&nbsp;
-              Minsik Kim (Inha University) &nbsp;&bull;&nbsp;
-              Yong-Su Jin &middot; Donald R. Ort (UIUC) &nbsp;&bull;&nbsp;
-              Yong Keun Chang &middot; Ki Jun Jeong (KAIST) &nbsp;&bull;&nbsp;
-              CJ BIO Research Institute
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="news" class="band alt">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>News &amp; gallery</h2>
-        <p>Lab updates and photos, also maintained in Notion &mdash; add a row with Type&nbsp;=&nbsp;News and it appears here.</p>
-      </div>
-      <div class="feed" id="newsfeed"></div>
-    </div>
-  </section>
-
-  <section id="contact" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Join us &amp; contact</h2>
-        <p>We are always looking for curious people who want to build cells that do something useful.</p>
-      </div>
-      <div class="two">
-        <div class="contact">
-          <dl>
-            <dt>Office</dt><dd>Woojungwon #7009<br>College of Engineering, Kyung Hee University</dd>
-            <dt>Address</dt><dd>1732 Deogyeong-daero, Giheung-gu<br>Yongin-si, Gyeonggi-do 17104, Republic of Korea</dd>
-            <dt>Phone</dt><dd>+82-31-201-2446</dd>
-            <dt>Email</dt><dd><a href="mailto:nkkang@khu.ac.kr">nkkang@khu.ac.kr</a></dd>
-            <dt>Department</dt><dd><a href="https://chemeng.khu.ac.kr/">Chemical Engineering, KHU</a></dd>
-          </dl>
-        </div>
-        <aside class="join">
-          <h3>Join the lab</h3>
-          <p>We accept MS, PhD, and integrated MS&ndash;PhD students each semester, and welcome undergraduate researchers from Chemical Engineering and allied departments.</p>
-          <ul>
-            <li>Interest in metabolic engineering, synthetic biology, or fermentation &mdash; prior experience welcome but not required</li>
-            <li>Comfort with molecular biology at the bench, or with analyzing sequencing and omics data</li>
-            <li>Postdoctoral inquiries in C1 bioconversion and microalgal engineering are always considered</li>
-          </ul>
-          <a class="cta" href="mailto:nkkang@khu.ac.kr?subject=Prospective%20student%20inquiry">Email the PI &rarr;</a>
-        </aside>
-      </div>
-    </div>
-  </section>
-</main>
+<main id="page" aria-live="polite"></main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot">
-      <div><h4>Laboratory</h4><p>Synthetic Biology and BioProcess<br>Engineering Laboratory (SBPEL)<br>Dept. of Chemical Engineering, KHU</p></div>
-      <div><h4>Address</h4><p>1732 Deogyeong-daero, Giheung-gu<br>Yongin-si, Gyeonggi-do 17104<br>Republic of Korea</p></div>
-      <div><h4>Contact</h4><p><a href="mailto:nkkang@khu.ac.kr">nkkang@khu.ac.kr</a><br>+82-31-201-2446<br>Woojungwon #7009</p></div>
-      <div><h4>Elsewhere</h4><p><a href="https://scholar.google.com/citations?user=">Google Scholar</a><br><a href="https://www.researchgate.net/">ResearchGate</a><br><a href="https://chemeng.khu.ac.kr/">Department</a></p></div>
-    </div>
-    <div class="foot-b">
-      <span>&copy; <span id="yr"></span> SBPEL, Kyung Hee University</span>
-      <span id="stamp"></span>
-    </div>
+  <div class="foot">
+    <div id="footlines"></div>
+    <div class="khu" id="khulogo"></div>
   </div>
 </footer>
 
 <script>
 (function(){
-  document.getElementById('yr').textContent = new Date().getFullYear();
+  var PAGES = [
+    {id:'home',         label:'Home'},
+    {id:'research',     label:'Research'},
+    {id:'people',       label:'People'},
+    {id:'publications', label:'Publications'},
+    {id:'gallery',      label:'Gallery'}
+  ];
+  var C = null, PUBS = [], filter = '', pubTab = 'journal';
 
-  /* ---------- nav highlight ---------- */
-  var links = [].slice.call(document.querySelectorAll('.navlinks a')), map = {};
-  links.forEach(function(a){ var el = document.querySelector(a.getAttribute('href')); if (el) map[el.id] = a; });
-  var targets = Object.keys(map).map(function(id){ return document.getElementById(id); });
-  if (window.IntersectionObserver && targets.length){
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if (e.isIntersecting){
-          links.forEach(function(a){ a.removeAttribute('aria-current'); });
-          map[e.target.id].setAttribute('aria-current','true');
-        }
-      });
-    }, { rootMargin:'-60px 0px -70% 0px', threshold:0 });
-    targets.forEach(function(t){ io.observe(t); });
+  /* ---- helpers ---- */
+  var OKTAG = /^(\/?)(i|b|em|strong|sub|sup|br|u|span|a)$/i;
+  function rich(s){
+    if (s == null) return '';
+    return String(s).replace(/<\s*(\/?)([a-zA-Z0-9]+)([^>]*)>/g, function(m, sl, tag, rest){
+      if (!OKTAG.test(sl + tag)) return '';
+      if (tag.toLowerCase() === 'a' && !sl) {
+        var href = (rest.match(/href\s*=\s*["']([^"']*)["']/) || [,''])[1];
+        if (/^javascript:/i.test(href)) href = '';
+        return '<a href="' + esc(href) + '" target="_blank" rel="noopener">';
+      }
+      return '<' + sl + tag.toLowerCase() + '>';
+    }).replace(/\son\w+\s*=/gi, ' data-x=');
   }
-
-  /* ---------- data ---------- */
-  var LABELS = { journal:'Journals', patent:'Patents', conference:'Conferences', book:'Book chapters' };
-  var state = { items: [], filter: 'journal' };
-
-  /* Content fields may carry light markup (<i>, <b>, <sub>) written in Notion.
-     Allow that, strip anything executable, and escape attributes separately. */
-  var ALLOWED = /^(\/?)(i|b|em|strong|sub|sup|br|u|span)$/i;
   function esc(s){
-    if (s == null) return '';
-    return String(s)
-      .replace(/<\s*(\/?)([a-zA-Z0-9]+)([^>]*)>/g, function(m, slash, tag){
-        return ALLOWED.test(slash + tag) ? '<' + slash + tag.toLowerCase() + '>' : '';
-      })
-      .replace(/\son\w+\s*=/gi, ' data-x=');
+    return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+      .replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
-  function attr(s){
-    if (s == null) return '';
-    var v = String(s).trim();
-    if (/^javascript:/i.test(v)) return '';
-    return v.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  function img(src, cls, phcls, label){
+    if (src) return '<img class="' + cls + '" src="' + esc(src) + '" alt="" loading="lazy">';
+    return '<div class="ph-box ' + phcls + '">' + (label || 'image') + '</div>';
   }
 
-  function renderTabs(types){
-    var box = document.getElementById('pubtabs');
-    box.innerHTML = '';
-    types.forEach(function(t){
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.textContent = LABELS[t] || t;
-      b.setAttribute('aria-pressed', String(t === state.filter));
-      b.addEventListener('click', function(){ state.filter = t; renderTabs(types); renderPubs(); });
-      box.appendChild(b);
+  /* ---- chrome ---- */
+  function renderChrome(){
+    var cur = route();
+    document.getElementById('topnav').innerHTML =
+      PAGES.map(function(p){
+        return '<a href="#' + p.id + '"' + (p.id === cur ? ' aria-current="page"' : '') + '>' + p.label + '</a>';
+      }).join('') +
+      '<button class="searchbtn" id="searchtoggle" aria-label="Search" aria-expanded="false">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></button>';
+
+    var st = document.getElementById('searchtoggle'), box = document.getElementById('searchbox');
+    st.addEventListener('click', function(){
+      var open = box.classList.toggle('open');
+      st.setAttribute('aria-expanded', String(open));
+      if (open) document.getElementById('searchinput').focus();
     });
+
+    var s = C && C.site || {};
+    document.getElementById('brandname').textContent = s.short_name || 'KANG LAB';
+    document.getElementById('brandmark').innerHTML = s.logo
+      ? '<img class="mark" src="' + esc(s.logo) + '" alt="">'
+      : '<span class="mark-ph"></span>';
+    document.getElementById('footlines').innerHTML =
+      (s.footer_lines || []).map(function(l){ return '<p>' + rich(l) + '</p>'; }).join('');
+    document.getElementById('khulogo').innerHTML =
+      s.khu_logo ? '<img src="' + esc(s.khu_logo) + '" alt="Kyung Hee University">'
+                 : '<div class="ph-box" style="aspect-ratio:5/1.4">KHU logo</div>';
   }
 
-  function renderPubs(){
-    var host = document.getElementById('publist');
-    var rows = state.items.filter(function(p){ return p.type === state.filter; });
-    document.getElementById('pubmeta').textContent =
-      rows.length + ' ' + (rows.length === 1 ? 'entry' : 'entries');
+  function banner(kind, title){
+    var s = C && C.site || {}, src = (s.banners || {})[kind] || '';
+    return '<section class="banner ' + (kind === 'home' ? 'home' : 'sub') + '">' +
+      (src ? '<img src="' + esc(src) + '" alt="">' : '<div class="ph"></div><span class="phlabel">banner</span>') +
+      '<h1>' + rich(title) + '</h1></section>';
+  }
 
-    if (!rows.length){
-      host.innerHTML = '<p class="loading">Nothing here yet.</p>';
-      return;
+  /* ---- pages ---- */
+  function pageHome(){
+    var s = C.site;
+    return banner('home', s.lab_name) +
+      '<div class="band"><h2>' + rich(s.home_welcome) + '</h2></div>' +
+      '<div class="wrap">' +
+        '<p class="intro">' + rich(s.home_intro) + '</p>' +
+        '<figure>' + img(s.home_figure, '', 'ph-flow', 'overview figure') + '</figure>' +
+      '</div>' +
+      '<div class="band"><h2>' + rich(s.contacts_title || 'Contacts') + '</h2></div>' +
+      '<div class="wrap"><div class="contacts">' +
+        (s.contacts_lines || []).map(function(l){ return '<div>' + rich(l) + '</div>'; }).join('') +
+      '</div></div>';
+  }
+
+  function pageResearch(){
+    var r = C.research;
+    return banner('research', 'Research') +
+      '<div class="wrap">' +
+        '<h2 style="text-align:center;font-family:var(--serif);color:var(--green);font-size:clamp(21px,2.8vw,29px);margin:6px 0 10px;">' +
+          rich(r.overview_title) + '</h2>' +
+        '<p class="ov-sub">' + rich(r.overview_sub) + '</p>' +
+        '<figure>' + img(r.overview_figure, '', 'ph-fig', 'overview figure') + '</figure>' +
+        '<p class="r-body" style="margin-top:26px;">' + rich(r.intro) + '</p>' +
+        (r.topics || []).map(function(t){
+          var fig = '<figure>' + img(t.figure, '', t.layout === 'side' ? 'ph-sq' : 'ph-fig', t.hint || 'figure') + '</figure>';
+          var body = '<p class="r-body">' + rich(t.body) + '</p>';
+          return '<section class="topic"><h3><span>' + rich(t.title) + '</span></h3>' +
+            (t.layout === 'side'
+              ? '<div class="side">' + fig + body + '</div>'
+              : fig + '<div style="margin-top:22px">' + body + '</div>') +
+            '</section>';
+        }).join('') +
+      '</div>';
+  }
+
+  function pagePeople(){
+    var p = C.people, pi = p.pi || {};
+    return banner('people', 'People') +
+      '<div class="band"><h2>Principal Investigator</h2></div>' +
+      '<div class="wrap"><div class="pi">' +
+        '<div class="shot">' + img(pi.photo, '', 'ph-photo', 'photo') + '</div>' +
+        '<div class="who">' +
+          '<h3>' + rich(pi.name) + '</h3>' +
+          '<p class="rank">' + rich(pi.title) + '</p>' +
+          '<p class="affil">' + rich(pi.affil) + '</p>' +
+          '<p class="addr">' + rich(pi.address) + '</p>' +
+          '<p class="cont">' + rich(pi.contact) + '</p>' +
+          '<p class="links">' + (pi.links || []).map(function(l){
+             return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + '</a>';
+           }).join(', ') + '</p>' +
+          '<ul>' + (pi.cv || []).map(function(c){ return '<li><span>' + rich(c) + '</span></li>'; }).join('') + '</ul>' +
+        '</div>' +
+      '</div>' +
+      '<div class="members">' + (p.members || []).map(function(m){
+        return '<article class="member">' +
+          '<div class="shot">' + img(m.photo, '', 'ph-photo', 'photo') + '</div>' +
+          '<div><h4>' + rich(m.name) + '</h4>' +
+          '<p class="role">' + rich(m.role) + '</p>' +
+          '<p>Email: ' + rich(m.email) + '</p>' +
+          '<p class="res">' + (m.research || []).map(function(x, i){
+             return '<span>' + (i === 0 ? 'Research: ' : '') + rich(x) + '</span>';
+           }).join('') + '</p></div></article>';
+      }).join('') + '</div></div>' +
+      rosterBlock('Alumni', p.alumni) +
+      rosterBlock('Former Lab Members', p.former);
+  }
+
+  function rosterBlock(title, rows){
+    if (!rows || !rows.length) return '';
+    return '<div class="band"><h2>' + esc(title) + '</h2></div>' +
+      '<div class="wrap"><table class="roster"><tbody>' +
+      rows.map(function(r){
+        return '<tr><td class="n">' + rich(r.name) + '</td><td class="i">' + rich(r.info) + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+
+  function pagePublications(){
+    var kinds = [['journal','Journals'],['patent','Patents'],['conference','Conferences'],['book','Book chapters']];
+    var present = kinds.filter(function(k){
+      return PUBS.some(function(p){ return p.type === k[0]; });
+    });
+    if (!present.length) present = [['journal','Journals']];
+    if (!present.some(function(k){ return k[0] === pubTab; })) pubTab = present[0][0];
+
+    var rows = PUBS.filter(function(p){ return p.type === pubTab; });
+    if (filter) {
+      var q = filter.toLowerCase();
+      rows = rows.filter(function(p){
+        return ((p.title||'') + ' ' + (p.authors||'') + ' ' + (p.journal||'')).toLowerCase().indexOf(q) > -1;
+      });
     }
-
-    rows.sort(function(a,b){
-      if (b.year !== a.year) return (b.year||0) - (a.year||0);
-      return esc(a.title).localeCompare(esc(b.title));
+    rows.sort(function(a, b){
+      if ((Number(b.year)||0) !== (Number(a.year)||0)) return (Number(b.year)||0) - (Number(a.year)||0);
+      return String(a.title||'').localeCompare(String(b.title||''));
     });
 
-    var years = [], byYear = {};
+    var years = [], by = {};
     rows.forEach(function(p){
       var y = p.year || 'Undated';
-      if (!byYear[y]){ byYear[y] = []; years.push(y); }
-      byYear[y].push(p);
+      if (!by[y]) { by[y] = []; years.push(y); }
+      by[y].push(p);
     });
 
-    host.innerHTML = years.map(function(y){
-      return '<div class="pubyear"><div class="yr">' + esc(y) + '</div><ol>' +
-        byYear[y].map(function(p){
-          var link = p.url || (p.doi ? 'https://doi.org/' + p.doi : '');
-          var title = link
-            ? '<a class="pub-t" href="' + attr(link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
-            : '<span class="pub-t">' + esc(p.title) + '</span>';
-          var meta = [];
-          if (p.journal) meta.push('<span class="jr">' + esc(p.journal) + '</span>');
-          if (p.tag) meta.push('<em>' + esc(p.tag) + '</em>');
-          if (p.citation) meta.push('<span>' + esc(p.citation) + '</span>');
-          if (p.doi) meta.push('<a class="doi" href="https://doi.org/' + attr(p.doi) + '" target="_blank" rel="noopener">' + esc(p.doi) + '</a>');
-          return '<li>' + title +
-                 (p.authors ? '<div class="pub-a">' + esc(p.authors) + '</div>' : '') +
-                 (meta.length ? '<div class="pub-m">' + meta.join('') + '</div>' : '') +
-                 '</li>';
-        }).join('') + '</ol></div>';
-    }).join('');
+    var list = years.length ? years.map(function(y){
+      return '<div class="pubyear"><div class="yr">' + esc(y) + '</div><ol>' + by[y].map(function(p){
+        var link = p.url || (p.doi ? 'https://doi.org/' + p.doi : '');
+        var t = link
+          ? '<a class="pub-t" href="' + esc(link) + '" target="_blank" rel="noopener">' + rich(p.title) + '</a>'
+          : '<span class="pub-t">' + rich(p.title) + '</span>';
+        var meta = [];
+        if (p.journal)  meta.push('<span class="jr">' + rich(p.journal) + '</span>');
+        if (p.tag)      meta.push('<em>' + rich(p.tag) + '</em>');
+        if (p.citation) meta.push('<span>' + rich(p.citation) + '</span>');
+        if (p.doi)      meta.push('<a class="doi" href="https://doi.org/' + esc(p.doi) +
+                                  '" target="_blank" rel="noopener">' + rich(p.doi) + '</a>');
+        return '<li>' + t +
+               (p.authors ? '<div class="pub-a">' + rich(p.authors) + '</div>' : '') +
+               (meta.length ? '<div class="pub-m">' + meta.join('') + '</div>' : '') +
+               '</li>';
+      }).join('') + '</ol></div>';
+    }).join('') : '<p class="pubempty">No matching entries.</p>';
+
+    var tabs = '<div class="tabs" role="group" aria-label="Filter publications">' + present.map(function(k){
+      return '<button type="button" data-tab="' + k[0] + '" aria-pressed="' +
+             String(k[0] === pubTab) + '">' + k[1] + '</button>';
+    }).join('') + '</div>';
+
+    return banner('publications', 'Publications') +
+      '<div class="band"><h2>Journal Publications</h2></div>' +
+      '<div class="wrap">' +
+        '<div class="pubbar">' + tabs +
+          '<div class="pubmeta">' + rows.length + (rows.length === 1 ? ' entry' : ' entries') + '</div>' +
+        '</div>' + list +
+        '<p class="pubnote"><sup>&dagger;</sup> co-first author &nbsp;&middot;&nbsp; * corresponding author</p>' +
+      '</div>';
   }
 
-  function renderNews(){
-    var host = document.getElementById('newsfeed');
-    var rows = state.items.filter(function(p){ return p.type === 'news'; });
-    rows.sort(function(a,b){ return esc(b.date).localeCompare(esc(a.date)); });
-    if (!rows.length){ host.innerHTML = '<p class="loading">No updates yet.</p>'; return; }
-
-    host.innerHTML = rows.slice(0, 12).map(function(n){
-      var d = n.date ? new Date(n.date + 'T00:00:00') : null;
-      var label = d && !isNaN(d) ? d.toLocaleDateString('en-US',{ year:'numeric', month:'short', day:'numeric' }) : '';
-      var shot = n.image
-        ? '<div class="shot"><img src="' + attr(n.image) + '" alt="" loading="lazy"></div>'
-        : '<div class="shot"><span class="ph">SBPEL</span></div>';
-      return '<article class="card">' + shot +
-        '<div class="body">' +
-        (label ? '<time datetime="' + attr(n.date) + '">' + label + '</time>' : '') +
-        '<h3>' + esc(n.title) + '</h3>' +
-        (n.body ? '<p>' + esc(n.body) + '</p>' : '') +
-        (n.url ? '<a class="more" href="' + attr(n.url) + '" target="_blank" rel="noopener">Read more &rarr;</a>' : '') +
-        '</div></article>';
-    }).join('');
+  function pageGallery(){
+    var items = C.gallery || [];
+    return banner('gallery', 'Gallery') +
+      '<div class="wrap wide">' + (items.length ? items.map(function(g){
+        var shots = '<div class="gshots">' + (g.photos && g.photos.length ? g.photos : ['']).map(function(src){
+          return img(src, '', 'ph-sq', 'photo');
+        }).join('') + '</div>';
+        var cap = '<div class="cap">' +
+          (g.year ? '<p class="yr">' + rich(g.year) + '</p>' : '') +
+          (g.title ? '<h3 class="ttl">' + rich(g.title) + '</h3>' : '') +
+          (g.body ? '<p>' + rich(g.body) + '</p>' : '') + '</div>';
+        return '<section class="gitem ' + (g.layout === 'left' ? 'left' : 'center') + '">' +
+          (g.layout === 'left' ? '<div class="row">' + shots + cap + '</div>'
+                               : cap + '<div class="row">' + shots + '</div>') +
+          '</section>';
+      }).join('') : '<p class="pubempty">No gallery items yet.</p>') + '</div>';
   }
 
-  function boot(data){
-    state.items = (data && data.items) || [];
-    var order = ['journal','patent','conference','book'];
-    var present = order.filter(function(t){
-      return state.items.some(function(p){ return p.type === t; });
-    });
-    if (!present.length) present = ['journal'];
-    if (present.indexOf(state.filter) === -1) state.filter = present[0];
-    renderTabs(present);
-    renderPubs();
-    renderNews();
-    if (data && data.generated){
-      var g = new Date(data.generated);
-      if (!isNaN(g)){
-        document.getElementById('stamp').textContent =
-          'Publications synced from Notion · ' + g.toISOString().slice(0,10);
-      }
+  /* ---- routing ---- */
+  function route(){
+    var h = (location.hash || '#home').replace('#', '').split('/')[0];
+    return PAGES.some(function(p){ return p.id === h; }) ? h : 'home';
+  }
+  function render(){
+    if (!C) return;
+    var r = route();
+    renderChrome();
+    var html = r === 'research' ? pageResearch()
+             : r === 'people' ? pagePeople()
+             : r === 'publications' ? pagePublications()
+             : r === 'gallery' ? pageGallery()
+             : pageHome();
+    document.getElementById('page').innerHTML = html;
+    document.title = (r === 'home' ? 'KANG LAB' : PAGES.filter(function(p){ return p.id === r; })[0].label + ' · KANG LAB')
+                     + ' · Kyung Hee University';
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', render);
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest ? e.target.closest('.tabs button') : null;
+    if (t) { pubTab = t.getAttribute('data-tab'); render(); }
+  });
+  document.addEventListener('input', function(e){
+    if (e.target && e.target.id === 'searchinput') {
+      filter = e.target.value.trim();
+      if (route() !== 'publications') { location.hash = '#publications'; }
+      else { render(); document.getElementById('searchbox').classList.add('open'); }
     }
-  }
+  });
 
-  fetch('data/publications.json', { cache: 'no-cache' })
-    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(boot)
-    .catch(function(){
-      if (window.__SEED__) { boot(window.__SEED__); }
-      else {
-        document.getElementById('publist').innerHTML =
-          '<p class="loading">Publication data could not be loaded.</p>';
-        document.getElementById('newsfeed').innerHTML = '';
-      }
-    });
+  /* ---- boot ---- */
+  function boot(content, pubs){
+    C = content;
+    PUBS = (pubs && pubs.items) || [];
+    render();
+  }
+  Promise.all([
+    fetch('data/content.json', {cache:'no-cache'}).then(function(r){ return r.json(); }),
+    fetch('data/publications.json', {cache:'no-cache'}).then(function(r){ return r.json(); }).catch(function(){ return {items:[]}; })
+  ]).then(function(a){ boot(a[0], a[1]); })
+   .catch(function(){
+     if (window.__CONTENT__) boot(window.__CONTENT__, window.__PUBS__ || {items:[]});
+     else document.getElementById('page').innerHTML =
+       '<div class="wrap"><p class="pubempty">Content could not be loaded.</p></div>';
+   });
 })();
 </script>
 </body>
