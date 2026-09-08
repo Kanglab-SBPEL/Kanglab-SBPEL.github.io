@@ -1,0 +1,249 @@
+{
+ "generated": "2026-09-08T16:15:44.298Z",
+ "source": "notion",
+ "site": {
+  "short_name": "KANG LAB",
+  "lab_name": "Synthetic Biology and BioProcess Engineering Lab",
+  "logo": "",
+  "khu_logo": "",
+  "banners": {
+   "home": "",
+   "research": "",
+   "people": "",
+   "publications": "",
+   "gallery": ""
+  },
+  "home_welcome": "Welcome to the KANG Lab!",
+  "home_intro": "The Synthetic Biology and Bioprocess Engineering Lab at Kyung Hee University (KHU) engineers microorganisms into cell factories for sustainable biomanufacturing. Our work runs along three connected lines. First, we build the foundational tools that make non-conventional hosts — methylotrophic yeasts, oleaginous microalgae, marine protists, and methanotrophs — as tractable as model organisms, developing CRISPR/Cas9 multiplex editing, in vivo DNA assembly, and safe-harbor expression systems. Second, we apply metabolic engineering to convert renewable carbon — CO<sub>2</sub>, methane, methanol, and lignocellulosic sugars — into three families of products: industrial chemicals and fuels (white biotechnology), pharmaceuticals and nutraceuticals (red biotechnology), and food and feed materials (green biotechnology). Third, we are building an AI-driven, automated design–build–test–learn platform, so that strain development becomes a data-driven and increasingly self-directed process rather than a manual one. Together these efforts aim at bioprocesses that are not only environmentally sound but economically competitive.",
+  "home_figure": "",
+  "contacts_title": "Contacts",
+  "contacts_lines": [
+   "We are seeking undergrads, grad students (MS/Ph.D), researchers, and post-docs.",
+   "If you are interested in our lab, please feel free to email us (&lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt;).",
+   "대학원생, 석사급 연구원, 박사후 연구원을 모집중에 있습니다.",
+   "합성생물학, 대사공학 및 미생물 생물공정에 관심있는 학생들과 연구원들은 이메일로 (&lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt;) 연락바랍니다."
+  ],
+  "footer_lines": [
+   "Chemical Engineering, Kyung Hee University",
+   "1732, Deogyeong-daero Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
+   "(Tel) +82-31-241-2446 (email) nkkang@khu.ac.kr",
+   "Copyright © 2022 by The KANG Lab @KHU. All rights reserved."
+  ]
+ },
+ "research": {
+  "overview_title": "Research Overview",
+  "overview_sub": "Sustainable Synthetic Biology and BioProcess Engineering<br>for the Production of Value-added Products",
+  "overview_figure": "",
+  "intro": "Fossil-fuel dependence and continuous greenhouse gas emission have made sustainable routes to fuels, chemicals, and materials an urgent research priority. Our answer is the microbial cell: given the right genetic tools and the right process, microorganisms can convert CO<sub>2</sub>, methane, methanol, and inedible biomass into products that are today made from petroleum. We organize this work into three research lines — the foundational tools that make new hosts engineerable, the metabolic engineering that turns them into producers of chemical, pharmaceutical, and food materials, and the automation and artificial intelligence that shorten the design cycle for both.",
+  "topics": [
+   {
+    "title": "Development of foundational synthetic biology tools for diverse microorganisms",
+    "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms that ability is still limited. We develop the foundational toolkit that makes non-conventional hosts as tractable as model organisms: CRISPR/Cas9 genome editing and multiplex integration, Golden Gate cloning, in vivo DNA assembly that bypasses <i>E. coli</i> cloning altogether, safe-harbor loci identified from transcriptional hotspots, RNAi-based knockdown, and transcription-factor engineering. Screening is built into the toolkit — fluorescence-activated cell sorting and high-throughput phenotype and genotype assays let us obtain desirable strains efficiently rather than one at a time. In <i>Komagataella phaffii</i>, for example, synergistic deletion of Ku70 with RAD52 overexpression raised integration efficiency from 15.3% to 68.1% with 50-bp homology arms, and enabled assembly of ten DNA fragments in vivo. We apply the same approach across methylotrophic yeasts, oleaginous microalgae, marine protists, acid-tolerant yeasts, and methanotrophs.",
+    "hint": "toolbox — hosts × genetic tools",
+    "layout": "side",
+    "figure": ""
+   },
+   {
+    "title": "Metabolic engineering for white, red, and green bioproducts",
+    "body": "With the tools in hand, the question becomes what to make. We direct carbon flux in engineered strains toward three families of products, following the colour convention of industrial biotechnology. <b>White</b> — industrial chemicals, fuels, and materials: organic acids such as lactic and malic acid, free fatty acids and their derivatives, and bioplastic precursors, produced from methanol, lignocellulosic sugars, and CO<sub>2</sub>. <b>Red</b> — pharmaceuticals and nutraceuticals: long-chain polyunsaturated fatty acids including EPA and DHA, carotenoids, and terpenoids. <b>Green</b> — food and feed materials: microalgal biomass, single-cell protein, food-grade lipids, and natural pigments. The same feedstocks and the same host organisms serve all three; what differs is the pathway we install and the process we design around it. Representative results include 61.2 g/L malic acid from xylose, 67 g/L lactic acid without pH adjustment, EPA productivity of 14.4 mg L<sup>−1</sup> day<sup>−1</sup> in <i>Nannochloropsis</i>, and a 25% increase in DHA content in <i>Schizochytrium</i>.",
+    "hint": "feedstocks → hosts → white / red / green products",
+    "layout": "full",
+    "figure": ""
+   },
+   {
+    "title": "AI-driven automation: biofoundry and the self-driving lab",
+    "body": "Strain engineering is still largely manual, and the design–build–test–learn cycle is the rate-limiting step in biomanufacturing. We are building an automated, data-driven platform to shorten it: standardized genetic parts and assembly protocols that a liquid handler can execute, high-throughput cultivation and analytics that generate consistent phenotype data, and machine-learning models trained on that data to propose the next round of designs. Combined with genome-scale metabolic models and techno-economic analysis, the aim is a biofoundry in which the choice of the next experiment is made from data rather than intuition — a step toward a self-driving laboratory for microbial cell factory development.",
+    "hint": "automated design–build–test–learn loop",
+    "layout": "full",
+    "figure": ""
+   }
+  ]
+ },
+ "people": {
+  "pi": {
+   "name": "Nam Kyu Kang, Ph.D",
+   "title": "Assistant professor",
+   "photo": "",
+   "affil": "Chemical Engineering, Kyung Hee University (KHU)",
+   "address": "1732, Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
+   "contact": "Email: &lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt; / Phone:+82-31-201-2446 / Office: Woojungwon #7009",
+   "links": [
+    [
+     "Google Scholar",
+     "https://scholar.google.com/citations?user="
+    ],
+    [
+     "ResearchGate",
+     "https://www.researchgate.net/"
+    ],
+    [
+     "LinkedIn",
+     "https://www.linkedin.com/"
+    ]
+   ],
+   "cv": [
+    "Assistant professor, Chemical Engineering, Kyung Hee University, 2022-present",
+    "Postdoctoral Research Associate, UIUC, 2018-2022",
+    "Senior Researcher, Advanced Biomass R&amp;D Center, KAIST, 2017-2018",
+    "Ph.D. Chemical and Biomolecular Engineering, KAIST, 2017",
+    "B.S. Chemical Engineering, Sungkyunkwan University, 2012"
+   ]
+  },
+  "members": [
+   {
+    "name": "Hyunjun Min",
+    "role": "Graduate researcher [Lab manager]",
+    "email": "hjmin0602@khu.ac.kr",
+    "research": [
+     "Microalgae engineering",
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Yejee Park",
+    "role": "Researcher",
+    "email": "park75253@khu.ac.kr",
+    "research": [
+     "Yeast metabolic engineering",
+     "Methanotroph engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Daeun Lee",
+    "role": "Graduate researcher",
+    "email": "0515lde@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Jiwoo Kwon",
+    "role": "Graduate researcher",
+    "email": "kjwoo6737@khu.ac.kr",
+    "research": [
+     "Yeast engineering",
+     "Methanotroph engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Seunghyun Kim",
+    "role": "Graduate researcher",
+    "email": "lej12131213@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Ayoung Kim",
+    "role": "Graduate researcher",
+    "email": "ayoung@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Youngrak Jang",
+    "role": "Graduate researcher",
+    "email": "jang03141@khu.ac.kr",
+    "research": [
+     "Microalgae engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Yeseul Nam",
+    "role": "Undergraduate researcher",
+    "email": "dptmf7@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Yeonju Tak",
+    "role": "Undergraduate researcher",
+    "email": "takyj0902@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Junseong Kim",
+    "role": "Undergraduate researcher",
+    "email": "kjunii02@khu.ac.kr",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   },
+   {
+    "name": "Hyungjun Park",
+    "role": "Undergraduate researcher",
+    "email": "qkrgudwns222@gmail.com",
+    "research": [
+     "Yeast engineering"
+    ],
+    "photo": ""
+   }
+  ],
+  "alumni": [
+   {
+    "name": "Yejin Lin",
+    "info": "Master / 2023.01-2026.02 / Medytox researcher"
+   },
+   {
+    "name": "Yujung  Choi",
+    "info": "Master / 2023.08-2026.02"
+   },
+   {
+    "name": "Yejee Park",
+    "info": "Master / 2023.01-2026.02 / KHU researcher"
+   }
+  ],
+  "former": [
+   {
+    "name": "Nahyeon Kwon",
+    "info": "Undergraduate researcher / 2025.06-2026.02"
+   },
+   {
+    "name": "Minseok Jeong",
+    "info": "Undergraduate researcher / 2025.03-2026.02"
+   },
+   {
+    "name": "Seongwoong Lee",
+    "info": "Undergraduate researcher / 2023.06-2024.07"
+   },
+   {
+    "name": "Taekwon Lee",
+    "info": "Undergraduate researcher / 2023.06-2024.06"
+   },
+   {
+    "name": "Yutark Cho",
+    "info": "Undergraduate researcher / 2023.06-2023.12"
+   }
+  ]
+ },
+ "gallery": [
+  {
+   "title": "ADELANTE",
+   "year": "2026",
+   "body": "We had a great time with the lab members to celebrate the festival. 🎊",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "2026 Spring KSBB",
+   "year": "",
+   "body": "We attended the conference and presented posters.<br>Jiwoo received an award at the poster presentation session.",
+   "layout": "center",
+   "photos": []
+  }
+ ]
+}
