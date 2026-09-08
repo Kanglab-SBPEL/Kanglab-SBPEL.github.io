@@ -70,7 +70,7 @@ async function findDatabases() {
     page.results.forEach((db) => {
       const title = (db.title || []).map((t) => t.plain_text).join('').trim();
       const cols = new Set(Object.keys(db.properties || {}).map((k) => k.toLowerCase()));
-      found.push({ id: db.id, title, cols });
+      found.push({ id: db.id, title, cols, created: db.created_time || '' });
     });
     cursor = page.has_more ? page.next_cursor : undefined;
   } while (cursor);
@@ -222,12 +222,28 @@ const SIGNATURE = {
   site:         (c) => c.has('key') && (c.has('text') || c.has('image')),
 };
 
+const ARCHIVED = (d) => /archive|\(old\)/i.test(d.title || '');
+
+/** Tables of one kind created together are read together (a list may be split
+ *  across a few tables); anything older is treated as a superseded copy. */
+const BATCH_MS = 6 * 60 * 60 * 1000;
+
 function locate(kind, ...words) {
-  const byTitle = dbs.filter((d) => words.every((w) => d.title.toLowerCase().includes(w)));
+  const live = dbs.filter((d) => !ARCHIVED(d));
+  const byTitle = live.filter((d) => words.every((w) => d.title.toLowerCase().includes(w)));
   const test = SIGNATURE[kind];
-  const bySig = test ? dbs.filter((d) => test(d.cols)) : [];
-  const ids = new Set([...byTitle, ...bySig].map((d) => d.id));
-  return [...ids];
+  const bySig = test ? live.filter((d) => test(d.cols)) : [];
+  const hits = [...new Set([...byTitle, ...bySig])];
+  if (hits.length < 2) return hits.map((d) => d.id);
+  hits.sort((a, b) => String(b.created).localeCompare(String(a.created)));
+  const newest = Date.parse(hits[0].created) || 0;
+  const keep = hits.filter((d) => newest - (Date.parse(d.created) || 0) < BATCH_MS);
+  const drop = hits.filter((d) => !keep.includes(d));
+  if (drop.length) {
+    const names = (a) => a.map((d) => d.title || '(untitled)').join(', ');
+    console.log('  ' + kind + ': reading ' + names(keep) + '; ignoring superseded ' + names(drop));
+  }
+  return keep.map((d) => d.id);
 }
 
 const fallback = (process.env.NOTION_DATABASE_ID || '').replace(/-/g, '');
@@ -274,6 +290,7 @@ for (const page of await rowsOf(ID.publications, 'publications')) {
   pubItems.push({
     type,
     year: num(pick(p, 'Year')) ?? null,
+    order: num(pick(p, 'Order')) ?? null,
     title,
     authors: html(pick(p, 'Authors', 'Author')),
     journal: html(pick(p, 'Journal', 'Venue', 'Office')),
