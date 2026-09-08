@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T21:01:18.023Z",
+ "generated": "2026-09-08T23:57:43.384Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -26,7 +26,7 @@
   "footer_lines": [
    "Chemical Engineering, Kyung Hee University",
    "1732, Deogyeong-daero Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
-   "(Tel) +82-31-241-2446 (email) nkkang@khu.ac.kr",
+   "(Tel) +82-31-201-2446 (email) nkkang@khu.ac.kr",
    "Copyright © 2022 by The KANG Lab @KHU. All rights reserved."
   ]
  },
@@ -38,21 +38,21 @@
   "topics": [
    {
     "title": "Development of foundational synthetic biology tools for diverse microorganisms",
-    "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms that ability is still limited. We develop the foundational toolkit that makes non-conventional hosts as tractable as model organisms: CRISPR/Cas9 genome editing and multiplex integration, Golden Gate cloning, in vivo DNA assembly that bypasses <i>E. coli</i> cloning altogether, safe-harbor loci identified from transcriptional hotspots, RNAi-based knockdown, and transcription-factor engineering. Screening is built into the toolkit — fluorescence-activated cell sorting and high-throughput phenotype and genotype assays let us obtain desirable strains efficiently rather than one at a time. In <i>Komagataella phaffii</i>, for example, synergistic deletion of Ku70 with RAD52 overexpression raised integration efficiency from 15.3% to 68.1% with 50-bp homology arms, and enabled assembly of ten DNA fragments in vivo. We apply the same approach across methylotrophic yeasts, oleaginous microalgae, marine protists, acid-tolerant yeasts, and methanotrophs.",
+    "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms that ability is still limited. We build the foundational toolkit that makes non-conventional hosts as tractable as the established model organisms: CRISPR/Cas9 genome editing and multiplex integration, modular cloning and in vivo DNA assembly, safe-harbor loci identified from transcriptional hotspots, RNAi-based knockdown, and transcription-factor engineering. Screening is treated as part of the toolkit rather than an afterthought, so that improved strains are obtained by selection from large populations instead of one at a time. We develop these tools across methylotrophic yeasts, oleaginous microalgae, marine protists, acid-tolerant yeasts, and methanotrophs, and our aim in each case is the same: to turn a promising but intractable organism into a well-characterised chassis that others can build on.",
     "hint": "toolbox — hosts × genetic tools",
     "layout": "side",
     "figure": ""
    },
    {
     "title": "Metabolic engineering for white, red, and green bioproducts",
-    "body": "With the tools in hand, the question becomes what to make. We direct carbon flux in engineered strains toward three families of products, following the colour convention of industrial biotechnology. <b>White</b> — industrial chemicals, fuels, and materials: organic acids such as lactic and malic acid, free fatty acids and their derivatives, and bioplastic precursors, produced from methanol, lignocellulosic sugars, and CO<sub>2</sub>. <b>Red</b> — pharmaceuticals and nutraceuticals: long-chain polyunsaturated fatty acids including EPA and DHA, carotenoids, and terpenoids. <b>Green</b> — food and feed materials: microalgal biomass, single-cell protein, food-grade lipids, and natural pigments. The same feedstocks and the same host organisms serve all three; what differs is the pathway we install and the process we design around it. Representative results include 61.2 g/L malic acid from xylose, 67 g/L lactic acid without pH adjustment, EPA productivity of 14.4 mg L<sup>−1</sup> day<sup>−1</sup> in <i>Nannochloropsis</i>, and a 25% increase in DHA content in <i>Schizochytrium</i>.",
+    "body": "With the tools in hand, the question becomes what to make. We redirect carbon flux in engineered strains toward three families of products, following the colour convention of industrial biotechnology. <b>White</b> — industrial chemicals, fuels, and materials, including organic acids, fatty acids and their derivatives, and bioplastic precursors. <b>Red</b> — pharmaceuticals and nutraceuticals, including long-chain polyunsaturated fatty acids, carotenoids, and terpenoids. <b>Green</b> — food and feed materials, including microalgal biomass, single-cell protein, food-grade lipids, and natural pigments. The feedstocks are renewable and largely non-food — CO<sub>2</sub>, methane, methanol, and lignocellulosic sugars — and the same host organisms serve all three families; what differs is the pathway we install and the process we design around it. Pathway design, cofactor and redox balancing, tolerance engineering, and fermentation development are treated as one problem rather than as separate stages, because a strain that performs well only in a shake flask is not yet a useful result.",
     "hint": "feedstocks → hosts → white / red / green products",
     "layout": "full",
     "figure": ""
    },
    {
     "title": "AI-driven automation: biofoundry and the self-driving lab",
-    "body": "Strain engineering is still largely manual, and the design–build–test–learn cycle is the rate-limiting step in biomanufacturing. We are building an automated, data-driven platform to shorten it: standardized genetic parts and assembly protocols that a liquid handler can execute, high-throughput cultivation and analytics that generate consistent phenotype data, and machine-learning models trained on that data to propose the next round of designs. Combined with genome-scale metabolic models and techno-economic analysis, the aim is a biofoundry in which the choice of the next experiment is made from data rather than intuition — a step toward a self-driving laboratory for microbial cell factory development.",
+    "body": "Strain engineering is still largely manual, and the design–build–test–learn cycle remains the rate-limiting step in biomanufacturing. We are building an automated, data-driven platform to shorten it: standardised genetic parts and assembly protocols that a liquid handler can execute, high-throughput cultivation and analytics that generate consistent phenotype data, and machine-learning models trained on that data to propose the next round of designs. Combined with genome-scale metabolic models and techno-economic analysis, the aim is a biofoundry in which the choice of the next experiment is made from data rather than intuition — a step toward a self-driving laboratory for microbial cell factory development.",
     "hint": "automated design–build–test–learn loop",
     "layout": "full",
     "figure": ""
@@ -63,7 +63,7 @@
   "pi": {
    "name": "Nam Kyu Kang, Ph.D",
    "title": "Assistant professor",
-   "photo": "",
+   "photo": "assets/img/602602c759c9.jpg",
    "affil": "Chemical Engineering, Kyung Hee University (KHU)",
    "address": "1732, Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
    "contact": "Email: &lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt; / Phone:+82-31-201-2446 / Office: Woojungwon #7009",
@@ -242,6 +242,118 @@
    "title": "2026 Spring KSBB",
    "year": "",
    "body": "We attended the conference and presented posters.<br>Jiwoo received an award at the poster presentation session.",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2026 Winter Commencement 🎓",
+   "year": "",
+   "body": "<b>Yejin, Yujung, and Yejee</b><br>Congratulations on your graduation!<br><br><b>Ayoung and Youngrak</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "Happy Birthday! 🎂",
+   "year": "2026",
+   "body": "to our one and only Professor :&gt;",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "2025 2nd Symposium of the Functional Hybrid Materials Program",
+   "year": "",
+   "body": "Jiwoo presented research on Yeast-Derived Vitamin A Production System at the 2nd Symposium on 2025 Functional Hybrid Materials Program.",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "KSBB-AFOB Conference 2025",
+   "year": "",
+   "body": "We attended the conference and presented posters. Yejin delivered a 3-minute poster presentation and Jiwoo received an award at the poster presentation session.",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2025 1st Symposium of the Functional Hybrid Materials Program",
+   "year": "",
+   "body": "Daeun presented research on eco-friendly plastics at the 1st Symposium on 2025 Functional Hybrid Materials Program.",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2025 Kang Lab MT 🏕",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2025 Summer Commencement 🎓",
+   "year": "",
+   "body": "<b>Seunghyun</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "2025 Winter Commencement 🎓",
+   "year": "",
+   "body": "<b>Daeun and Jiwoo</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "Useless Gift Exchange : Christmas 2024",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "Happy Birthday! 🎂",
+   "year": "2024",
+   "body": "to our one and only Professor :&gt;",
+   "layout": "left",
+   "photos": []
+  },
+  {
+   "title": "2024 ADELANTE Fall Festival",
+   "year": "",
+   "body": "We had a great time with the lab members to celebrate the fall festival. 🍂",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2024 Fall KSBB",
+   "year": "",
+   "body": "Yujung, Yejee, and Yejin attended the conference and presented posters.",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2024 ADELANTE Spring Festival",
+   "year": "",
+   "body": "We had a great time with the lab members to celebrate the spring festival. 🍂",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2024 Winter Commencement 🎓",
+   "year": "",
+   "body": "<b>Yejin, Yejee, and Yujung</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2023 Fall KSBB",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "photos": []
+  },
+  {
+   "title": "2023 C1 Gas Refinery Symposium",
+   "year": "",
+   "body": "",
    "layout": "center",
    "photos": []
   }
