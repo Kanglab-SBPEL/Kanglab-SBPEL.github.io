@@ -1,0 +1,262 @@
+{
+ "generated": "2026-09-08T04:27:09.983Z",
+ "source": "notion",
+ "counts": {
+  "news": 4,
+  "journal": 20
+ },
+ "items": [
+  {
+   "type": "news",
+   "date": "2025-03-07",
+   "title": "Modular algal–bacterial co-culture published in <i>Metabolic Engineering</i>",
+   "body": "A GYD1-deficient <i>C. reinhardtii</i> mutant feeds glycolate to <i>E. coli</i> in a two-stage continuous system, producing GFP and lycopene directly from CO2.",
+   "url": "https://doi.org/10.1016/j.ymben.2025.03.004",
+   "image": ""
+  },
+  {
+   "type": "news",
+   "date": "2026-03-01",
+   "title": "Yejin Lin completes her MS and joins Medytox",
+   "body": "Congratulations to Yejin on finishing her master's degree in the lab and starting her industry career.",
+   "url": "",
+   "image": ""
+  },
+  {
+   "type": "news",
+   "date": "2026-05-25",
+   "title": "Review on methanol valorization in yeasts out in <i>New Biotechnology</i>",
+   "body": "A lab-wide review with Prof. Jeong Chan Joo covering methanol assimilation, synthetic methylotrophy, and fermentation engineering for C1 biomanufacturing.",
+   "url": "https://doi.org/10.1016/j.nbt.2026.05.011",
+   "image": ""
+  },
+  {
+   "type": "news",
+   "date": "2026-07-11",
+   "title": "New genome engineering platform for <i>K. phaffii</i> published",
+   "body": "Yujung and Ayoung's HR-enhanced chassis (Ku70Δ / RAD52 OE) reaches 68.1% integration with 50-bp homology arms, and assembles ten DNA fragments in vivo without <i>E. coli</i> cloning.",
+   "url": "https://doi.org/10.1186/s13036-026-00731-z",
+   "image": ""
+  },
+  {
+   "type": "journal",
+   "year": 2026,
+   "title": "All you can eat yeast: substituting hexose transporters with AtSWEET7 alleviates glucose repression, enabling simultaneous utilization of sugars in renewable feedstocks",
+   "authors": "Kuanyshev N, Dai D, Kim J, <b>Kang NK</b>, Cheng MH, Singh V, Jin YS*",
+   "journal": "Biotechnology and Bioengineering",
+   "citation": "123:1518–1530",
+   "doi": "10.1002/bit.70188",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2026,
+   "title": "Systematic metabolic engineering of <i>Komagataella phaffii</i> for methanol-to-lactate bioconversion",
+   "authors": "Choi Y, Lin Y, <b>Kang NK*</b>",
+   "journal": "Bioprocess and Biosystems Engineering",
+   "citation": "49:1353–1362",
+   "doi": "10.1007/s00449-026-03326-6",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2026,
+   "title": "Harnessing yeasts for sustainable methanol valorization: metabolic and fermentation engineering strategies",
+   "authors": "Choi Y, Park Y, Lin Y, Min H, Lee D, Kwon J, Kim S, Joo JC*, <b>Kang NK*</b>",
+   "journal": "New Biotechnology",
+   "citation": "94:106–120",
+   "doi": "10.1016/j.nbt.2026.05.011",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2026,
+   "title": "An advanced genome engineering platform for <i>Komagataella phaffii</i> enabling versatile in vivo DNA assembly and multiplex integration",
+   "authors": "Choi Y, Kim A, <b>Kang NK*</b>",
+   "journal": "Journal of Biological Engineering",
+   "citation": "18",
+   "doi": "10.1186/s13036-026-00731-z",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2025,
+   "title": "Enhancing lipid production in <i>Nannochloropsis salina</i> via RNAi-mediated downregulation of carbohydrate biosynthesis",
+   "authors": "Koh HG, Park K, Park SH, Kim M, <b>Kang NK*</b>",
+   "journal": "Frontiers in Microbiology",
+   "citation": "16:1601691",
+   "doi": "10.3389/fmicb.2025.1601691",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2025,
+   "title": "Bioconversion of CO2 into valuable bioproducts via synthetic modular co-culture of engineered <i>Chlamydomonas reinhardtii</i> and <i>Escherichia coli</i>",
+   "authors": "<b>Kang NK</b>, Koh HG, Choi Y, Min H, Ort DR, Jin YS*",
+   "journal": "Metabolic Engineering",
+   "citation": "90:57–66",
+   "doi": "10.1016/j.ymben.2025.03.004",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2024,
+   "title": "Increasing lipid production in <i>Chlamydomonas reinhardtii</i> through genetic introduction for the overexpression of glyceraldehyde-3-phosphate dehydrogenase",
+   "authors": "Shin SE, Koh HG, Park K, Park SH, Chang YK, <b>Kang NK*</b>",
+   "journal": "Frontiers in Bioengineering and Biotechnology",
+   "citation": "12:1396127",
+   "doi": "10.3389/fbioe.2024.1396127",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2024,
+   "title": "Self-buffering system for cost-effective production of lactic acid from glucose and xylose using acid-tolerant <i>Issatchenkia orientalis</i>",
+   "authors": "Lee YG, <b>Kang NK</b>, Kim C, Tran VG, Cao M, Yoshikuni Y, Zhao H, Jin YS*",
+   "journal": "Bioresource Technology",
+   "citation": "399:130641",
+   "doi": "10.1016/j.biortech.2024.130641",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2024,
+   "title": "Optimization and mechanism analysis of photosynthetic EPA production in <i>Nannochloropsis salina</i>: evaluating the effect of temperature and nitrogen concentrations",
+   "authors": "Koh HG, Jeon S, Kim M, Chang YK, Park K, Park SH, <b>Kang NK*</b>",
+   "journal": "Plant Physiology and Biochemistry",
+   "citation": "211:108729",
+   "doi": "10.1016/j.plaphy.2024.108729",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2024,
+   "title": "Enhancing fatty acid and omega-3 production in <i>Schizochytrium</i> sp. using developed safe-harboring expression system",
+   "authors": "Ryu AJ, Shin WS, Jang S, Lin Y, Park Y, Choi Y, Kim JY*, <b>Kang NK*</b>",
+   "journal": "Journal of Biological Engineering",
+   "citation": "18:56",
+   "doi": "10.1186/s13036-024-00447-y",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2024,
+   "title": "Advanced metabolic engineering strategies for the sustainable production of free fatty acids and their derivatives using yeast",
+   "authors": "Saha TR, <b>Kang NK*</b>, Lee EY*",
+   "journal": "Journal of Biological Engineering",
+   "citation": "18:73",
+   "doi": "10.1186/s13036-024-00473-w",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2023,
+   "title": "Transcriptional insights into <i>Chlorella</i> sp. ABC-001: a comparative study of carbon fixation and lipid synthesis under different CO2 conditions",
+   "authors": "Koh HG, Cho JM, Jeon S, Chang YK, Lee B*, <b>Kang NK*</b>",
+   "journal": "Biotechnology for Biofuels and Bioproducts",
+   "citation": "16:113",
+   "doi": "10.1186/s13068-023-02358-4",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2023,
+   "title": "Engineered methane biocatalysis: strategies to assimilate methane for chemical production",
+   "authors": "<b>Kang NK</b>, Chau THT, Lee EY*",
+   "journal": "Current Opinion in Biotechnology",
+   "citation": "85:103031",
+   "doi": "10.1016/j.copbio.2023.103031",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2022,
+   "title": "Cas9-based metabolic engineering of <i>Issatchenkia orientalis</i> for enhanced utilization of cellulosic hydrolysates",
+   "authors": "Lee YG, Kim C, Kuanyshev N, <b>Kang NK</b>, Fatma Z, Wu ZY, Cheng MH, Singh V, Yoshikuni Y, Zhao H, Jin YS*",
+   "journal": "Journal of Agricultural and Food Chemistry",
+   "citation": "70:12085–12094",
+   "doi": "10.1021/acs.jafc.2c04251",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2021,
+   "title": "Molecular analysis of sugar transporters and glycolysis pathways in <i>Ettlia</i> sp. under heterotrophy using fructose and glucose",
+   "authors": "Kim M, Jeon S, <b>Kang NK</b>, Lee HG, Shin WS, Koh HG, Yun JH, Ahn CY, Oh HM, Chang YK*",
+   "journal": "Biotechnology Journal",
+   "citation": "17:e2100214",
+   "doi": "10.1002/biot.202100214",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2021,
+   "title": "Safe-harboring based novel genetic toolkit for <i>Nannochloropsis salina</i> CCMP1776: efficient overexpression of transgene via CRISPR/Cas9-mediated knock-in at the transcriptional hotspot",
+   "authors": "Ryu AJ, Jeong BR, <b>Kang NK</b>, Jeon S, Sohn MG, Yun HJ, Lim JM, Jeong SW, Park YI, Jeong WJ, Park S, Chang YK, Jeong KJ*",
+   "journal": "Bioresource Technology",
+   "citation": "340:125676",
+   "doi": "10.1016/j.biortech.2021.125676",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2021,
+   "title": "L-malic acid production from xylose by engineered <i>Saccharomyces cerevisiae</i>",
+   "authors": "<b>Kang NK</b>, Lee JW, Ort DR, Jin YS*",
+   "journal": "Biotechnology Journal",
+   "citation": "17:e2000431",
+   "doi": "10.1002/biot.202000431",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2021,
+   "title": "Microalgal metabolic engineering strategies for the production of fuels and chemicals",
+   "authors": "<b>Kang NK</b>, Baek K, Koh HG, Atkinson CA, Ort DR, Jin YS*",
+   "journal": "Bioresource Technology",
+   "citation": "345:126529",
+   "doi": "10.1016/j.biortech.2021.126529",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2020,
+   "title": "Enhancement of lipid production under heterotrophic conditions by overexpression of an endogenous bZIP transcription factor in <i>Chlorella</i> sp. HS2",
+   "authors": "Lee H, Shin WS, Kim YU, Jeon S, Kim M, <b>Kang NK</b>, Chang YK*",
+   "journal": "Journal of Microbiology and Biotechnology",
+   "citation": "30:1597–1606",
+   "doi": "10.4014/jmb.2005.05048",
+   "url": "",
+   "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2020,
+   "title": "The NanDeSyn database for <i>Nannochloropsis</i> systems and synthetic biology",
+   "authors": "Gong Y, <b>Kang NK</b>, Kim YU, et al., Jeong BR, Xu J*",
+   "journal": "The Plant Journal",
+   "citation": "104:1736–1745",
+   "doi": "10.1111/tpj.15025",
+   "url": "",
+   "tag": ""
+  }
+ ]
+}
