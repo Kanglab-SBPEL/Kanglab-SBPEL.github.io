@@ -100,8 +100,9 @@ function html(p) {
   return parts(p)
     .map((t) => {
       let s = (t.plain_text || '');
-      // text that already carries <i>/<b> markup (e.g. from a CSV import) is kept as-is
-      const markup = /<\/?(i|b|em|strong|sub|sup|br)\b/i.test(s);
+      // text that already carries markup (e.g. <i>, <sub>, a mailto link typed into a
+      // cell) is passed through; the site sanitises tags and hrefs when it renders
+      const markup = /<\/?(i|b|em|strong|sub|sup|br|u|a)\b/i.test(s);
       if (!markup) s = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const a = t.annotations || {};
       if (a.italic) s = `<i>${s}</i>`;
