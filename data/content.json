@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T11:57:05.133Z",
+ "generated": "2026-09-09T12:38:01.418Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -41,21 +41,21 @@
     "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms, this ability is still limited. We build foundational toolkits that make conventional and non-conventional hosts as tractable as established model organisms. These include CRISPR/Cas9 genome editing and multiplex integration, modular cloning and in vivo DNA assembly, gene expression regulation, genetic circuits, and biosensors. We develop these tools across bacteria, yeasts, microalgae, marine protists, and methanotrophs. In each case, our aim is the same: to turn a promising but intractable organism into a well-characterized chassis upon which others can build.",
     "hint": "toolbox — hosts × genetic tools",
     "layout": "side",
-    "figure": ""
+    "figure": "assets/img/f74bfd6dc870.jpg"
    },
    {
     "title": "Metabolic engineering for white, red, and green bioproducts",
-    "body": "With the tools in hand, the question becomes what to make. We redirect carbon flux in engineered strains toward three families of products, following the colour convention of industrial biotechnology. <b>White</b> — industrial chemicals, fuels, and materials, including organic acids, fatty acids and their derivatives, and bioplastic precursors. <b>Red</b> — pharmaceuticals and nutraceuticals, including long-chain polyunsaturated fatty acids, carotenoids, and terpenoids. <b>Green</b> — food and feed materials, including microalgal biomass, single-cell protein, food-grade lipids, and natural pigments. The feedstocks are renewable and largely non-food — CO<sub>2</sub>, methane, methanol, and lignocellulosic sugars — and the same host organisms serve all three families; what differs is the pathway we install and the process we design around it. Pathway design, cofactor and redox balancing, tolerance engineering, and fermentation development are treated as one problem rather than as separate stages, because a strain that performs well only in a shake flask is not yet a useful result.",
+    "body": "With the foundational tools in place, the question becomes what to make. Following the color conventions of industrial biotechnology, we redirect carbon flux in engineered strains toward three main product families. In White biotechnology, we focus on eco-friendly bioplastics, sustainable biofuels, and essential industrial chemicals. For Red biotechnology, our targets include high-value pharmaceuticals, health supplements, and functional biomolecules such as antioxidants and omega fatty acids. Finally, in Green biotechnology, we produce alternative proteins, sustainable animal feed, and natural food ingredients. To achieve this, we utilize renewable, strictly non-food feedstocks, including CO2, C1 carbon sources like methanol and formate, and agricultural biomass. While the same host organisms can serve all three fields, we tailor the genetic pathways, <b>engineer key enzymes to overcome metabolic bottlenecks</b>, and optimize the bioprocesses for each specific target. Ultimately, we treat <b>enzyme engineering</b>, genetic pathway design, cellular metabolism optimization, and industrial fermentation scaling as a single, unified engineering challenge, because a strain that succeeds only in a small-scale shake flask is not yet a truly useful result.",
     "hint": "feedstocks → hosts → white / red / green products",
     "layout": "full",
-    "figure": ""
+    "figure": "assets/img/2fe953cb0d37.jpg"
    },
    {
     "title": "AI-driven automation: biofoundry and the self-driving lab",
-    "body": "Strain engineering is still largely manual, and the design–build–test–learn cycle remains the rate-limiting step in biomanufacturing. We are building an automated, data-driven platform to shorten it: standardised genetic parts and assembly protocols that a liquid handler can execute, high-throughput cultivation and analytics that generate consistent phenotype data, and machine-learning models trained on that data to propose the next round of designs. Combined with genome-scale metabolic models and techno-economic analysis, the aim is a biofoundry in which the choice of the next experiment is made from data rather than intuition — a step toward a self-driving laboratory for microbial cell factory development.",
+    "body": "Strain engineering is still largely manual, and the design–build–test–learn (DBTL) cycle remains the rate-limiting step in biomanufacturing. We are building an automated, data-driven platform to shorten it: standardized genetic parts and assembly protocols that a liquid handler can execute, high-throughput cultivation and analytics that generate consistent phenotype data, and machine-learning models trained on that data to propose the next round of designs. Integrating these AI-assisted approaches with genome-scale metabolic models, our aim is to establish a biofoundry where the choice of the next experiment is driven by data rather than intuition—a significant step toward a self-driving laboratory for microbial cell factory development.",
     "hint": "automated design–build–test–learn loop",
     "layout": "full",
-    "figure": ""
+    "figure": "assets/img/b4dd83c15b0c.jpg"
    }
   ]
  },
