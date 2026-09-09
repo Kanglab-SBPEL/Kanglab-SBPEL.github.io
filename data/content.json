@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T12:38:01.418Z",
+ "generated": "2026-09-09T12:46:15.546Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -40,12 +40,12 @@
     "title": "Development of foundational synthetic biology tools for diverse microorganisms",
     "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms, this ability is still limited. We build foundational toolkits that make conventional and non-conventional hosts as tractable as established model organisms. These include CRISPR/Cas9 genome editing and multiplex integration, modular cloning and in vivo DNA assembly, gene expression regulation, genetic circuits, and biosensors. We develop these tools across bacteria, yeasts, microalgae, marine protists, and methanotrophs. In each case, our aim is the same: to turn a promising but intractable organism into a well-characterized chassis upon which others can build.",
     "hint": "toolbox — hosts × genetic tools",
-    "layout": "side",
+    "layout": "full",
     "figure": "assets/img/f74bfd6dc870.jpg"
    },
    {
     "title": "Metabolic engineering for white, red, and green bioproducts",
-    "body": "With the foundational tools in place, the question becomes what to make. Following the color conventions of industrial biotechnology, we redirect carbon flux in engineered strains toward three main product families. In White biotechnology, we focus on eco-friendly bioplastics, sustainable biofuels, and essential industrial chemicals. For Red biotechnology, our targets include high-value pharmaceuticals, health supplements, and functional biomolecules such as antioxidants and omega fatty acids. Finally, in Green biotechnology, we produce alternative proteins, sustainable animal feed, and natural food ingredients. To achieve this, we utilize renewable, strictly non-food feedstocks, including CO2, C1 carbon sources like methanol and formate, and agricultural biomass. While the same host organisms can serve all three fields, we tailor the genetic pathways, <b>engineer key enzymes to overcome metabolic bottlenecks</b>, and optimize the bioprocesses for each specific target. Ultimately, we treat <b>enzyme engineering</b>, genetic pathway design, cellular metabolism optimization, and industrial fermentation scaling as a single, unified engineering challenge, because a strain that succeeds only in a small-scale shake flask is not yet a truly useful result.",
+    "body": "With the foundational tools in place, the question becomes what to make. Following the color conventions of industrial biotechnology, we redirect carbon flux in engineered strains toward three main product families. In White biotechnology, we focus on eco-friendly bioplastics, sustainable biofuels, and essential industrial chemicals. For Red biotechnology, our targets include high-value pharmaceuticals, health supplements, and functional biomolecules such as antioxidants and omega fatty acids. Finally, in Green biotechnology, we produce alternative proteins, sustainable animal feed, and natural food ingredients. To achieve this, we utilize renewable, strictly non-food feedstocks, including CO2, C1 carbon sources like methanol and formate, and agricultural biomass. While the same host organisms can serve all three fields, we tailor the genetic pathways, engineer key enzymes to overcome metabolic bottlenecks, and optimize the bioprocesses for each specific target. Ultimately, we treat enzyme engineering, genetic pathway design, cellular metabolism optimization, and industrial fermentation scaling as a single, unified engineering challenge, because a strain that succeeds only in a small-scale shake flask is not yet a truly useful result.",
     "hint": "feedstocks → hosts → white / red / green products",
     "layout": "full",
     "figure": "assets/img/2fe953cb0d37.jpg"
