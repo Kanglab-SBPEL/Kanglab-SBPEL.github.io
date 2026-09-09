@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T03:17:51.999Z",
+ "generated": "2026-09-09T03:31:13.663Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -98,7 +98,7 @@
      "Microalgae engineering",
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/d7b2f9342c47.png"
    },
    {
     "name": "Yejee Park",
@@ -108,7 +108,7 @@
      "Yeast metabolic engineering",
      "Methanotroph engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/9605f18bfccf.jpg"
    },
    {
     "name": "Daeun Lee",
@@ -117,7 +117,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/b5239802d4b7.jpg"
    },
    {
     "name": "Jiwoo Kwon",
@@ -127,7 +127,7 @@
      "Yeast engineering",
      "Methanotroph engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/8a0ab6ab538e.png"
    },
    {
     "name": "Seunghyun Kim",
@@ -136,7 +136,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/8717e80757cb.jpg"
    },
    {
     "name": "Ayoung Kim",
@@ -145,7 +145,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/63adb096e033.jpg"
    },
    {
     "name": "Youngrak Jang",
@@ -163,7 +163,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/272e16e5adce.jpg"
    },
    {
     "name": "Yeonju Tak",
@@ -172,7 +172,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/6bba0a72541c.jpg"
    },
    {
     "name": "Junseong Kim",
@@ -181,7 +181,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/35f723d9bfe4.png"
    },
    {
     "name": "Hyungjun Park",
@@ -190,7 +190,7 @@
     "research": [
      "Yeast engineering"
     ],
-    "photo": ""
+    "photo": "assets/img/4c2b1b2951e7.png"
    }
   ],
   "alumni": [
