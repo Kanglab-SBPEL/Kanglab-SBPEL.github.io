@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T00:05:45.432Z",
+ "generated": "2026-09-09T00:29:41.929Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -236,126 +236,144 @@
    "year": "2026",
    "body": "We had a great time with the lab members to celebrate the festival. 🎊",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "2026 Spring KSBB",
    "year": "",
    "body": "We attended the conference and presented posters.<br>Jiwoo received an award at the poster presentation session.",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 4
   },
   {
    "title": "2026 Winter Commencement 🎓",
    "year": "",
    "body": "<b>Yejin, Yujung, and Yejee</b><br>Congratulations on your graduation!<br><br><b>Ayoung and Youngrak</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "Happy Birthday! 🎂",
    "year": "2026",
    "body": "to our one and only Professor :&gt;",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "2025 2nd Symposium of the Functional Hybrid Materials Program",
    "year": "",
    "body": "Jiwoo presented research on Yeast-Derived Vitamin A Production System at the 2nd Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "KSBB-AFOB Conference 2025",
    "year": "",
    "body": "We attended the conference and presented posters. Yejin delivered a 3-minute poster presentation and Jiwoo received an award at the poster presentation session.",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 5
   },
   {
    "title": "2025 1st Symposium of the Functional Hybrid Materials Program",
    "year": "",
    "body": "Daeun presented research on eco-friendly plastics at the 1st Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 3
   },
   {
    "title": "2025 Kang Lab MT 🏕",
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 3
   },
   {
    "title": "2025 Summer Commencement 🎓",
    "year": "",
    "body": "<b>Seunghyun</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 1
   },
   {
    "title": "2025 Winter Commencement 🎓",
    "year": "",
    "body": "<b>Daeun and Jiwoo</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "Useless Gift Exchange : Christmas 2024",
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 3
   },
   {
    "title": "Happy Birthday! 🎂",
    "year": "2024",
    "body": "to our one and only Professor :&gt;",
    "layout": "left",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "2024 ADELANTE Fall Festival",
    "year": "",
    "body": "We had a great time with the lab members to celebrate the fall festival. 🍂",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 5
   },
   {
    "title": "2024 Fall KSBB",
    "year": "",
    "body": "Yujung, Yejee, and Yejin attended the conference and presented posters.",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 2
   },
   {
    "title": "2024 ADELANTE Spring Festival",
    "year": "",
    "body": "We had a great time with the lab members to celebrate the spring festival. 🍂",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 5
   },
   {
    "title": "2024 Winter Commencement 🎓",
    "year": "",
    "body": "<b>Yejin, Yejee, and Yujung</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 3
   },
   {
    "title": "2023 Fall KSBB",
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 3
   },
   {
    "title": "2023 C1 Gas Refinery Symposium",
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": []
+   "photos": [],
+   "slots": 4
   }
  ]
 }
