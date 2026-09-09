@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T10:18:10.947Z",
+ "generated": "2026-09-09T10:57:51.621Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -261,15 +261,22 @@
    "year": "",
    "body": "We attended the conference and presented posters.<br>Jiwoo received an award at the poster presentation session.",
    "layout": "center",
-   "photos": [],
-   "slots": 4
+   "photos": [
+    "assets/img/4ccce3fed262.png",
+    "assets/img/8b2243fdfb16.png",
+    "assets/img/a1050e44af85.png"
+   ],
+   "slots": 3
   },
   {
    "title": "2026 Winter Commencement 🎓",
    "year": "",
    "body": "<b>Yejin, Yujung, and Yejee</b><br>Congratulations on your graduation!<br><br><b>Ayoung and Youngrak</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/09cc441d8750.png",
+    "assets/img/e8834cd9f294.png"
+   ],
    "slots": 2
   },
   {
@@ -277,7 +284,10 @@
    "year": "2026",
    "body": "to our one and only Professor :&gt;",
    "layout": "left",
-   "photos": [],
+   "photos": [
+    "assets/img/f8b6f0fb81d2.png",
+    "assets/img/5daeff6207e0.png"
+   ],
    "slots": 2
   },
   {
@@ -285,7 +295,10 @@
    "year": "",
    "body": "Jiwoo presented research on Yeast-Derived Vitamin A Production System at the 2nd Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "left",
-   "photos": [],
+   "photos": [
+    "assets/img/0448b6cc38be.png",
+    "assets/img/dad4fc08d16e.png"
+   ],
    "slots": 2
   },
   {
@@ -293,7 +306,13 @@
    "year": "",
    "body": "We attended the conference and presented posters. Yejin delivered a 3-minute poster presentation and Jiwoo received an award at the poster presentation session.",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/858b84c2e873.jpg",
+    "assets/img/49f7d3be56bb.jpg",
+    "assets/img/2a50427fb403.jpg",
+    "assets/img/648b571939e5.jpg",
+    "assets/img/d656b12e5d3f.jpg"
+   ],
    "slots": 5
   },
   {
@@ -301,7 +320,11 @@
    "year": "",
    "body": "Daeun presented research on eco-friendly plastics at the 1st Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/4fa6afbdcdbe.png",
+    "assets/img/79c2140c2603.jpg",
+    "assets/img/41baa52ffedd.jpg"
+   ],
    "slots": 3
   },
   {
@@ -309,7 +332,11 @@
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/4b6bb2139e17.png",
+    "assets/img/e77becdd4b9c.png",
+    "assets/img/4e9567cd1ae0.png"
+   ],
    "slots": 3
   },
   {
@@ -317,7 +344,9 @@
    "year": "",
    "body": "<b>Seunghyun</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
-   "photos": [],
+   "photos": [
+    "assets/img/07de6ffe34f9.png"
+   ],
    "slots": 1
   },
   {
@@ -325,7 +354,10 @@
    "year": "",
    "body": "<b>Daeun and Jiwoo</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
-   "photos": [],
+   "photos": [
+    "assets/img/29dacebbee14.jpg",
+    "assets/img/fdeb5ef0fa6d.jpg"
+   ],
    "slots": 2
   },
   {
@@ -333,7 +365,11 @@
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/07785cc210f4.jpg",
+    "assets/img/fc3b8e92b040.jpg",
+    "assets/img/72535bf1c72b.jpg"
+   ],
    "slots": 3
   },
   {
