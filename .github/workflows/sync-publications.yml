@@ -25,6 +25,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install ImageMagick
+        # the sync downscales Notion photos to web size; the runner image no
+        # longer ships ImageMagick, so it is installed here. If this ever fails
+        # the sync still runs and keeps the images at their original size.
+        continue-on-error: true
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends imagemagick
+
       - name: Pull database from Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
