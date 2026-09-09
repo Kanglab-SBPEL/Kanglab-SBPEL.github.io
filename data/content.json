@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-09T14:21:33.764Z",
+ "generated": "2026-09-09T14:55:15.628Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
   "lab_name": "Synthetic Biology and BioProcess Engineering Lab",
-  "logo": "assets/img/048128747359.jpg",
+  "logo": "https://raw.githubusercontent.com/Kanglab-SBPEL/Kanglab-SBPEL.github.io/main/assets/brand/sbpel-logo.png",
   "khu_logo": "assets/img/96d93dd1fde4.jpg",
   "banners": {
    "home": "",
@@ -62,7 +62,7 @@
  "people": {
   "pi": {
    "name": "Nam Kyu Kang, Ph.D",
-   "title": "Assistant professor",
+   "title": "Associate professor",
    "photo": "assets/img/602602c759c9.jpg",
    "affil": "Chemical Engineering, Kyung Hee University (KHU)",
    "address": "1732, Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
