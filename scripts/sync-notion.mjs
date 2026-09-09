@@ -415,7 +415,8 @@ const content = {
     footer_lines: sls('footer_lines'),
   },
   research: {
-    overview_title: sv('research_overview_title', 'Research Overview'),
+    // no default: clearing the Site row removes the heading from the page
+    overview_title: sv('research_overview_title'),
     overview_sub: sv('research_overview_sub'),
     overview_figure: sim('research_overview_figure'),
     intro: sv('research_intro'),
