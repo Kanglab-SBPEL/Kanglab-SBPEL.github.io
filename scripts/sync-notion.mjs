@@ -409,7 +409,9 @@ const content = {
     },
     home_welcome: sv('home_welcome', 'Welcome to the KANG Lab!'),
     home_intro: sv('home_intro'),
-    home_figure: sim('home_figure'),
+    // the figure is normally on the home_figure row, but an image dropped on
+    // the home_intro row is meant for the same slot, so accept either
+    home_figure: sim('home_figure') || (S.home_intro ? S.home_intro.image : ''),
     contacts_title: sv('contacts_title', 'Contacts'),
     contacts_lines: sls('contacts_lines'),
     footer_lines: sls('footer_lines'),
