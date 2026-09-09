@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T11:08:48.609Z",
+ "generated": "2026-09-09T11:24:40.782Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -32,9 +32,9 @@
  },
  "research": {
   "overview_title": "Research Overview",
-  "overview_sub": "Sustainable Synthetic Biology and BioProcess Engineering<br>for the Production of Value-added Products",
+  "overview_sub": "",
   "overview_figure": "",
-  "intro": "Fossil-fuel dependence and continuous greenhouse gas emission have made sustainable routes to fuels, chemicals, and materials an urgent research priority. Our answer is the microbial cell: given the right genetic tools and the right process, microorganisms can convert CO<sub>2</sub>, methane, methanol, and inedible biomass into products that are today made from petroleum. We organize this work into three research lines — the foundational tools that make new hosts engineerable, the metabolic engineering that turns them into producers of chemical, pharmaceutical, and food materials, and the automation and artificial intelligence that shorten the design cycle for both.",
+  "intro": "",
   "topics": [
    {
     "title": "Development of foundational synthetic biology tools for diverse microorganisms",
