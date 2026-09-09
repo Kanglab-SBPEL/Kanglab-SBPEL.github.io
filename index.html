@@ -299,11 +299,13 @@
     var r = C.research;
     return banner('research', 'Research') +
       '<div class="wrap">' +
-        '<h2 style="text-align:center;font-family:var(--serif);color:var(--green);font-size:clamp(21px,2.8vw,29px);margin:6px 0 10px;">' +
-          rich(r.overview_title) + '</h2>' +
-        '<p class="ov-sub">' + rich(r.overview_sub) + '</p>' +
-        '<figure>' + img(r.overview_figure, '', 'ph-fig', 'overview figure') + '</figure>' +
-        '<p class="r-body" style="margin-top:26px;">' + rich(r.intro) + '</p>' +
+        // each overview element appears only when Notion has something for it,
+        // so clearing a Site row removes that element instead of leaving a blank
+        (r.overview_title ? '<h2 style="text-align:center;font-family:var(--serif);color:var(--green);font-size:clamp(21px,2.8vw,29px);margin:6px 0 10px;">' +
+          rich(r.overview_title) + '</h2>' : '') +
+        (r.overview_sub ? '<p class="ov-sub">' + rich(r.overview_sub) + '</p>' : '') +
+        (r.overview_figure ? '<figure>' + img(r.overview_figure, '', 'ph-fig', 'overview figure') + '</figure>' : '') +
+        (r.intro ? '<p class="r-body" style="margin-top:26px;">' + rich(r.intro) + '</p>' : '') +
         (r.topics || []).map(function(t){
           var fig = '<figure>' + img(t.figure, '', t.layout === 'side' ? 'ph-sq' : 'ph-fig', t.hint || 'figure') + '</figure>';
           var body = '<p class="r-body">' + rich(t.body) + '</p>';
