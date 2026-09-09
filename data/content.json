@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T10:03:19.337Z",
+ "generated": "2026-09-09T10:18:10.947Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -14,7 +14,7 @@
    "gallery": ""
   },
   "home_welcome": "Welcome to the KANG Lab!",
-  "home_intro": "The Synthetic Biology and Bioprocess Engineering Lab at Kyung Hee University (KHU) engineers microorganisms into cell factories for sustainable biomanufacturing. Our work runs along three connected lines. First, we build the foundational tools that make non-conventional hosts — methylotrophic yeasts, oleaginous microalgae, marine protists, and methanotrophs — as tractable as model organisms, developing CRISPR/Cas9 multiplex editing, in vivo DNA assembly, and safe-harbor expression systems. Second, we apply metabolic engineering to convert renewable carbon — CO<sub>2</sub>, methane, methanol, and lignocellulosic sugars — into three families of products: industrial chemicals and fuels (white biotechnology), pharmaceuticals and nutraceuticals (red biotechnology), and food and feed materials (green biotechnology). Third, we are building an AI-driven, automated design–build–test–learn platform, so that strain development becomes a data-driven and increasingly self-directed process rather than a manual one. Together these efforts aim at bioprocesses that are not only environmentally sound but economically competitive.",
+  "home_intro": "The Synthetic Biology and Bioprocess Engineering Lab at Kyung Hee University (KHU) engineers microorganisms into cell factories for sustainable biomanufacturing. Our work runs along three connected lines. First, we build the foundational tools that make conventional and non-conventional hosts — bacteria, yeasts, microalgae, marine protists, and methanotrophs — as tractable as model organisms, developing synthetic biology tools. Second, we apply metabolic engineering to convert renewable carbon — CO2, methane, methanol, and lignocellulosic sugars — into various bioproducts: industrial chemicals and fuels (white biotechnology), pharmaceuticals and nutraceuticals (red biotechnology), and food and feed materials (green biotechnology). Third, we are building an AI-driven, automated design–build–test–learn platform, so that strain development becomes a data-driven and increasingly self-directed process rather than a manual one. Together these efforts aim at bioprocesses that are not only environmentally sound but economically competitive.",
   "home_figure": "",
   "contacts_title": "Contacts",
   "contacts_lines": [
