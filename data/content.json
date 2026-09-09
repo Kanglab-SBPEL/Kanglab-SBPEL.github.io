@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T11:00:19.072Z",
+ "generated": "2026-09-09T11:08:48.609Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -38,7 +38,7 @@
   "topics": [
    {
     "title": "Development of foundational synthetic biology tools for diverse microorganisms",
-    "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms**, this** ability is still limited. We build foundational toolkits that make conventional and non-conventional hosts as tractable as established model organisms. These include CRISPR/Cas9 genome editing and multiplex integration, modular cloning and in vivo DNA assembly, gene expression regulation, genetic circuits, and biosensors. We develop these tools across bacteria, yeasts, microalgae, marine protists, and methanotrophs. In each case, our aim is the same: to turn a promising but intractable organism into a well-characterized chassis upon which others can build.",
+    "body": "Synthetic biology begins with the ability to modify an organism at will, and for most industrially attractive microorganisms, this ability is still limited. We build foundational toolkits that make conventional and non-conventional hosts as tractable as established model organisms. These include CRISPR/Cas9 genome editing and multiplex integration, modular cloning and in vivo DNA assembly, gene expression regulation, genetic circuits, and biosensors. We develop these tools across bacteria, yeasts, microalgae, marine protists, and methanotrophs. In each case, our aim is the same: to turn a promising but intractable organism into a well-characterized chassis upon which others can build.",
     "hint": "toolbox — hosts × genetic tools",
     "layout": "side",
     "figure": ""
