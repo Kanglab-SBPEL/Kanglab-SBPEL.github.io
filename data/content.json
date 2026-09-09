@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T03:31:13.663Z",
+ "generated": "2026-09-09T04:10:34.015Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -191,6 +191,20 @@
      "Yeast engineering"
     ],
     "photo": "assets/img/4c2b1b2951e7.png"
+   },
+   {
+    "name": "Yujin Kim",
+    "role": "Undergraduate researcher",
+    "email": "yujindk1@khu.ac.kr",
+    "research": [],
+    "photo": "assets/img/bdb57a5bf86d.jpg"
+   },
+   {
+    "name": "Heeje Park",
+    "role": "Undergraduate researcher",
+    "email": "didwlsch0609@khu.ac.kr",
+    "research": [],
+    "photo": "assets/img/9998e2184a00.png"
    }
   ],
   "alumni": [
@@ -236,7 +250,10 @@
    "year": "2026",
    "body": "We had a great time with the lab members to celebrate the festival. 🎊",
    "layout": "left",
-   "photos": [],
+   "photos": [
+    "assets/img/58fb9572045f.png",
+    "assets/img/3074e7e19f05.png"
+   ],
    "slots": 2
   },
   {
