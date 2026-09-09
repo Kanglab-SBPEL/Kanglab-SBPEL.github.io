@@ -21,9 +21,13 @@
  * for the publications database), NOTION_VERSION (default 2022-06-28).
  */
 
-import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { writeFile, mkdir, readFile, stat, rename, unlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import path from 'node:path';
+
+const run = promisify(execFile);
 
 const TOKEN   = process.env.NOTION_TOKEN;
 const VERSION = process.env.NOTION_VERSION || '2022-06-28';
@@ -177,6 +181,51 @@ const seen = new Map();
  * from the row id, not the URL, so it stays stable between runs and the file is
  * not re-committed every time.
  */
+/* Notion keeps whatever was uploaded, which is often a 5000px photo of several
+ * megabytes, and Pages would serve it at that size. Figures are therefore
+ * downscaled once, on the way into the repo. ImageMagick ships with the GitHub
+ * runner; if it is missing the original is kept rather than failing the sync. */
+const MAX_EDGE = 1600;          // longest side, in pixels
+const SHRINK_ABOVE = 300 * 1024; // leave anything already small alone
+
+let magick;                     // '' once we know there is no binary
+async function imagemagick() {
+  if (magick !== undefined) return magick;
+  for (const bin of ['magick', 'convert']) {
+    try { await run(bin, ['-version']); magick = bin; return magick; } catch { /* try next */ }
+  }
+  console.warn('  ! ImageMagick not found — images are kept at their original size');
+  magick = '';
+  return magick;
+}
+
+const human = (n) => (n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.round(n / 1024) + ' KB');
+
+async function shrink(file, ext) {
+  if (!/^(jpe?g|png|webp)$/.test(ext)) return;   // leave svg and animated gif alone
+  const bin = await imagemagick();
+  if (!bin) return;
+  const before = (await stat(file)).size;
+  if (before < SHRINK_ABOVE) return;
+  const tmp = `${file}.tmp.${ext}`;
+  try {
+    const args = [file, '-auto-orient', '-resize', `${MAX_EDGE}x${MAX_EDGE}>`, '-strip'];
+    if (ext !== 'png') args.push('-quality', '82');
+    args.push(tmp);
+    await run(bin, args);
+    const after = (await stat(tmp)).size;
+    if (after > 0 && after < before) {
+      await rename(tmp, file);
+      console.log(`  · ${path.basename(file)}  ${human(before)} → ${human(after)}`);
+    } else {
+      await unlink(tmp).catch(() => {});
+    }
+  } catch (e) {
+    await unlink(tmp).catch(() => {});
+    console.warn(`  ! resize skipped (${path.basename(file)}): ${e.message}`);
+  }
+}
+
 async function localise(src, key) {
   if (!src) return '';
   if (!/amazonaws\.com|notion-static|secure\.notion/.test(src)) return src;
@@ -188,7 +237,9 @@ async function localise(src, key) {
     const ext = (new URL(src).pathname.match(/\.(jpe?g|png|webp|gif|avif|svg)$/i) || [, 'jpg'])[1].toLowerCase();
     const name = `${createHash('sha1').update(key).digest('hex').slice(0, 12)}.${ext}`;
     await mkdir(IMG_DIR, { recursive: true });
-    await writeFile(path.join(IMG_DIR, name), buf);
+    const dest = path.join(IMG_DIR, name);
+    await writeFile(dest, buf);
+    await shrink(dest, ext);
     const rel = `${IMG_DIR}/${name}`;
     seen.set(key, rel);
     return rel;
