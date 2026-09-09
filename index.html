@@ -426,7 +426,9 @@
     var items = C.gallery || [];
     return banner('gallery', 'Gallery') +
       '<div class="wrap wide">' + (items.length ? items.map(function(g){
-        var shots = '<div class="gshots">' + (g.photos && g.photos.length ? g.photos : ['']).map(function(src){
+        var slots = Math.max(1, Math.min(6, Number(g.slots) || 1));
+        var srcs = (g.photos && g.photos.length) ? g.photos : new Array(slots).join(',').split(',');
+        var shots = '<div class="gshots">' + srcs.map(function(src){
           return img(src, '', 'ph-sq', 'photo');
         }).join('') + '</div>';
         var cap = '<div class="cap">' +
