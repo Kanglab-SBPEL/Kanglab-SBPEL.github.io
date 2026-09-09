@@ -364,12 +364,17 @@ for (const page of await rowsOf(ID.gallery, 'gallery')) {
   const p = page.properties || {};
   const title = html(pick(p, 'Title', 'Name'));
   const order = num(pick(p, 'Order')) ?? 999;
+  // Photos are uploaded into a Files column; the older text column of the same
+  // name only ever held "|| || ||" markers, which say how many photo slots the
+  // entry had on the original site, so it is kept as the placeholder count.
+  const photos = await allImages(pick(p, 'Files', 'Photos', 'Photo', 'Images'), page.id + ':photos');
+  const slots = photos.length || Math.min(6, text(pick(p, 'Slots', 'Photos')).split('||').length);
   gallery.push({
     order, title,
     year: text(pick(p, 'Year')),
     body: html(pick(p, 'Body', 'Description')),
     layout: (sel(pick(p, 'Layout')) || 'center').toLowerCase(),
-    photos: await allImages(pick(p, 'Photos', 'Photo', 'Images'), page.id + ':photos'),
+    photos, slots,
   });
 }
 gallery.sort((a, b) => a.order - b.order);
