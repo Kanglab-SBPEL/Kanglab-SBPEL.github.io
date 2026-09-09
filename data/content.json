@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T23:57:43.384Z",
+ "generated": "2026-09-09T00:05:45.432Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -19,9 +19,9 @@
   "contacts_title": "Contacts",
   "contacts_lines": [
    "We are seeking undergrads, grad students (MS/Ph.D), researchers, and post-docs.",
-   "If you are interested in our lab, please feel free to email us (&lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt;).",
+   "If you are interested in our lab, please feel free to email us (<a href=\"mailto:nkkang@khu.ac.kr\">nkkang@khu.ac.kr</a>).",
    "대학원생, 석사급 연구원, 박사후 연구원을 모집중에 있습니다.",
-   "합성생물학, 대사공학 및 미생물 생물공정에 관심있는 학생들과 연구원들은 이메일로 (&lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt;) 연락바랍니다."
+   "합성생물학, 대사공학 및 미생물 생물공정에 관심있는 학생들과 연구원들은 이메일로 (<a href=\"mailto:nkkang@khu.ac.kr\">nkkang@khu.ac.kr</a>) 연락바랍니다."
   ],
   "footer_lines": [
    "Chemical Engineering, Kyung Hee University",
@@ -66,7 +66,7 @@
    "photo": "assets/img/602602c759c9.jpg",
    "affil": "Chemical Engineering, Kyung Hee University (KHU)",
    "address": "1732, Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
-   "contact": "Email: &lt;a href=\"mailto:nkkang@khu.ac.kr\"&gt;nkkang@khu.ac.kr&lt;/a&gt; / Phone:+82-31-201-2446 / Office: Woojungwon #7009",
+   "contact": "Email: <a href=\"mailto:nkkang@khu.ac.kr\">nkkang@khu.ac.kr</a> / Phone:+82-31-201-2446 / Office: Woojungwon #7009",
    "links": [
     [
      "Google Scholar",
