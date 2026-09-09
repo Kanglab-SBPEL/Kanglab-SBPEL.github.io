@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-09T14:55:15.628Z",
+ "generated": "2026-09-09T15:01:40.807Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
   "lab_name": "Synthetic Biology and BioProcess Engineering Lab",
-  "logo": "https://raw.githubusercontent.com/Kanglab-SBPEL/Kanglab-SBPEL.github.io/main/assets/brand/sbpel-logo.png",
+  "logo": "https://kanglab-sbpel.github.io/assets/brand/sbpel-logo-512.png",
   "khu_logo": "assets/img/96d93dd1fde4.jpg",
   "banners": {
    "home": "",
@@ -82,7 +82,8 @@
     ]
    ],
    "cv": [
-    "Assistant professor, Chemical Engineering, Kyung Hee University, 2022-present",
+    "Associate professor, Chemical Engineering, Kyung Hee University, 2026-present",
+    "Assistant professor, Chemical Engineering, Kyung Hee University, 2022-2026",
     "Postdoctoral Research Associate, UIUC, 2018-2022",
     "Senior Researcher, Advanced Biomass R&amp;D Center, KAIST, 2017-2018",
     "Ph.D. Chemical and Biomolecular Engineering, KAIST, 2017",
