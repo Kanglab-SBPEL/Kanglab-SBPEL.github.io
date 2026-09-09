@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T12:52:52.620Z",
+ "generated": "2026-09-09T13:02:50.940Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -15,7 +15,7 @@
   },
   "home_welcome": "Welcome to the KANG Lab!",
   "home_intro": "The Synthetic Biology and Bioprocess Engineering Lab at Kyung Hee University (KHU) engineers microorganisms into cell factories for sustainable biomanufacturing. Our work runs along three connected lines. First, we build the foundational tools that make conventional and non-conventional hosts — bacteria, yeasts, microalgae, marine protists, and methanotrophs — as tractable as model organisms, developing synthetic biology tools. Second, we apply metabolic engineering to convert renewable carbon — CO2, methane, methanol, and lignocellulosic sugars — into various bioproducts: industrial chemicals and fuels (white biotechnology), pharmaceuticals and nutraceuticals (red biotechnology), and food and feed materials (green biotechnology). Third, we are building an AI-driven, automated design–build–test–learn platform, so that strain development becomes a data-driven and increasingly self-directed process rather than a manual one. Together these efforts aim at bioprocesses that are not only environmentally sound but economically competitive.",
-  "home_figure": "",
+  "home_figure": "assets/img/4a61025af9ab.jpg",
   "contacts_title": "Contacts",
   "contacts_lines": [
    "We are seeking undergrads, grad students (MS/Ph.D), researchers, and post-docs.",
