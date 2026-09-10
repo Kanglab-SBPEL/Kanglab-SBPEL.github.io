@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T04:18:54.408Z",
+ "generated": "2026-09-10T04:56:57.131Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -246,6 +246,28 @@
   ]
  },
  "gallery": [
+  {
+   "title": "2026 Summer Commencement 🎓",
+   "year": "",
+   "body": "<b>Hyunjun</b><br>Congratulations on your graduation!",
+   "layout": "center",
+   "photos": [
+    "assets/img/685ed45fb4ae.png"
+   ],
+   "slots": 1
+  },
+  {
+   "title": "2025 Kang Lab MT 🏕",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "photos": [
+    "assets/img/27c4ff08c67c.jpg",
+    "assets/img/3c2f4d9251a7.png",
+    "assets/img/29d4e59eb6ad.png"
+   ],
+   "slots": 3
+  },
   {
    "title": "ADELANTE",
    "year": "2026",
