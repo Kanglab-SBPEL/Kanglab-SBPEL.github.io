@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T20:50:40.173Z",
+ "generated": "2026-09-10T01:30:52.717Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -386,15 +386,23 @@
    "year": "",
    "body": "We had a great time with the lab members to celebrate the fall festival. 🍂",
    "layout": "center",
-   "photos": [],
-   "slots": 5
+   "photos": [
+    "assets/img/2f1248f97cea.png",
+    "assets/img/a3b4b469b05f.png",
+    "assets/img/cc6ed003b7b8.png",
+    "assets/img/d3953a98da7b.png"
+   ],
+   "slots": 4
   },
   {
    "title": "2024 Fall KSBB",
    "year": "",
    "body": "Yujung, Yejee, and Yejin attended the conference and presented posters.",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/66f13ba9c817.png",
+    "assets/img/e6c0682653e9.png"
+   ],
    "slots": 2
   },
   {
@@ -402,15 +410,21 @@
    "year": "",
    "body": "We had a great time with the lab members to celebrate the spring festival. 🍂",
    "layout": "center",
-   "photos": [],
-   "slots": 5
+   "photos": [
+    "assets/img/cc4aeac7ef28.jpg"
+   ],
+   "slots": 1
   },
   {
    "title": "2024 Winter Commencement 🎓",
    "year": "",
    "body": "<b>Yejin, Yejee, and Yujung</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/a3f7151a7273.jpg",
+    "assets/img/f75058973ac3.jpg",
+    "assets/img/92945203db42.png"
+   ],
    "slots": 3
   },
   {
@@ -418,7 +432,11 @@
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/097de893eb57.jpg",
+    "assets/img/aa881456552b.jpg",
+    "assets/img/1d84814f1b50.jpg"
+   ],
    "slots": 3
   },
   {
@@ -426,7 +444,12 @@
    "year": "",
    "body": "",
    "layout": "center",
-   "photos": [],
+   "photos": [
+    "assets/img/71c9be0a89c4.jpg",
+    "assets/img/eef1528f4d5c.jpg",
+    "assets/img/d8107929f484.jpg",
+    "assets/img/5798ff6cc5fa.jpg"
+   ],
    "slots": 4
   }
  ]
