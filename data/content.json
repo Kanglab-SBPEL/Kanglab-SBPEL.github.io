@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T04:56:57.131Z",
+ "generated": "2026-09-10T05:02:22.833Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -252,9 +252,10 @@
    "body": "<b>Hyunjun</b><br>Congratulations on your graduation!",
    "layout": "center",
    "photos": [
-    "assets/img/685ed45fb4ae.png"
+    "assets/img/685ed45fb4ae.png",
+    "assets/img/9d44c0094c22.png"
    ],
-   "slots": 1
+   "slots": 2
   },
   {
    "title": "2025 Kang Lab MT 🏕",
