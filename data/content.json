@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T04:32:12.029Z",
+ "generated": "2026-09-16T06:23:56.393Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -93,7 +93,7 @@
   "members": [
    {
     "name": "Hyunjun Min",
-    "role": "Graduate researcher [Lab manager]",
+    "role": "Graduate researcher ",
     "email": "hjmin0602@khu.ac.kr",
     "research": [
      "Microalgae engineering",
@@ -150,7 +150,7 @@
    },
    {
     "name": "Youngrak Jang",
-    "role": "Graduate researcher",
+    "role": "Graduate researcher [Lab manager]",
     "email": "jang03141@khu.ac.kr",
     "research": [
      "Microalgae engineering"
