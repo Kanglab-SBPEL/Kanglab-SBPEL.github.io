@@ -11,6 +11,7 @@
  *   SBPEL People         →  content.people
  *   SBPEL Research       →  content.research.topics
  *   SBPEL Gallery        →  content.gallery
+ *   SBPEL Gallery Photos →  content.gallery[].photos  (optional, see below)
  *   SBPEL Site           →  content.site  +  research overview fields
  *
  * Every property is read tolerantly: a column left as plain Text after a CSV
@@ -19,7 +20,14 @@
  *
  * Image size / placement (all optional Select columns — leave them out and
  * nothing changes):
- *   SBPEL Gallery, "Size"            Small / Medium / Large  (thumbnail size)
+ *   SBPEL Gallery, "Size"            Small / Medium / Large  (fallback size for
+ *                                    an item's photos when it has no rows below)
+ *   SBPEL Gallery Photos             One row per photo, so each photo in a
+ *                                    gallery item can have its own size/order:
+ *     "Gallery Item"  (Text)         must match a Gallery item's Title exactly
+ *     "Photo"         (Files&media)  the image
+ *     "Size"          (Select)       Small / Medium / Large / Full
+ *     "Order"         (Number)       left-to-right position among that item's photos
  *   SBPEL Site, "Width" (or "Size")  Small / Medium / Large / Full
  *   SBPEL Site, "Align"              Left / Center / Right
  *     Width/Align only affect the home_figure and research_overview_figure
@@ -279,6 +287,7 @@ const SIGNATURE = {
   people:       (c) => c.has('group') && (c.has('role') || c.has('info')),
   research:     (c) => c.has('layout') && c.has('body') && !c.has('photos'),
   gallery:      (c) => c.has('photos') || (c.has('layout') && c.has('year') && c.has('body')),
+  galleryPhotos:(c) => c.has('gallery item') && (c.has('photo') || c.has('image') || c.has('file')),
   site:         (c) => c.has('key') && (c.has('text') || c.has('image')),
 };
 
@@ -308,18 +317,23 @@ function locate(kind, ...words) {
 
 const fallback = (process.env.NOTION_DATABASE_ID || '').replace(/-/g, '');
 const ID = {
-  publications: locate('publications', 'publication'),
-  people:       locate('people', 'people'),
-  research:     locate('research', 'research'),
-  gallery:      locate('gallery', 'gallery'),
-  site:         locate('site', 'site'),
+  publications:  locate('publications', 'publication'),
+  people:        locate('people', 'people'),
+  research:      locate('research', 'research'),
+  gallery:       locate('gallery', 'gallery'),
+  galleryPhotos: locate('galleryPhotos', 'gallery', 'photo'),
+  site:          locate('site', 'site'),
 };
 if (!ID.publications.length && fallback) ID.publications = [fallback];
 // a table can only belong to one kind: publications wins over the looser signatures
-for (const k of ['people', 'research', 'gallery', 'site']) {
+for (const k of ['people', 'research', 'gallery', 'galleryPhotos', 'site']) {
   ID[k] = ID[k].filter((id) => !ID.publications.includes(id));
 }
 ID.research = ID.research.filter((id) => !ID.gallery.includes(id));
+// "SBPEL Gallery Photos" title contains "gallery" too, so it can be picked up
+// by both locate() calls above — whichever table actually looks like the
+// per-photo one (has a "Gallery Item" column) keeps it, not the item table.
+ID.gallery = ID.gallery.filter((id) => !ID.galleryPhotos.includes(id));
 
 async function rowsOf(ids, label) {
   if (!ids || !ids.length) { console.log(`  (no ${label} database found — skipping)`); return []; }
@@ -417,26 +431,60 @@ for (const page of await rowsOf(ID.research, 'research')) {
 }
 topics.sort((a, b) => a.order - b.order);
 
+/* ---- gallery photos (optional: one row per photo, for per-photo size/order) ---- */
+const SIZES = ['small', 'medium', 'large', 'full'];
+const photoRows = [];
+for (const page of await rowsOf(ID.galleryPhotos, 'gallery photos')) {
+  const p = page.properties || {};
+  const parent = text(pick(p, 'Gallery Item', 'Gallery', 'Item', 'Title', 'Name'));
+  const src = await firstImage(pick(p, 'Photo', 'Image', 'File', 'Files'), page.id + ':photo');
+  if (!parent || !src) continue;
+  const size = (sel(pick(p, 'Size')) || 'medium').toLowerCase();
+  photoRows.push({
+    parent: parent.trim().toLowerCase(),
+    src,
+    size: SIZES.includes(size) ? size : 'medium',
+    order: num(pick(p, 'Order')) ?? 999,
+  });
+}
+/** Photos filed under this gallery item's title in the Gallery Photos table,
+ *  each carrying its own size — or null when that table has nothing for it,
+ *  so the caller falls back to the item's own Files column. */
+function photosFor(title) {
+  const key = title.trim().toLowerCase();
+  const rows = photoRows.filter((r) => r.parent === key);
+  if (!rows.length) return null;
+  return rows.sort((a, b) => a.order - b.order).map((r) => ({ src: r.src, size: r.size }));
+}
+
 /* ---- gallery ---- */
 const gallery = [];
 for (const page of await rowsOf(ID.gallery, 'gallery')) {
   const p = page.properties || {};
   const title = html(pick(p, 'Title', 'Name'));
   const order = num(pick(p, 'Order')) ?? 999;
-  // Photos are uploaded into a Files column; the older text column of the same
-  // name only ever held "|| || ||" markers, which say how many photo slots the
-  // entry had on the original site, so it is kept as the placeholder count.
-  const photos = await allImages(pick(p, 'Files', 'Photos', 'Photo', 'Images'), page.id + ':photos');
+  // "Size" is the item-level fallback (used when no Gallery Photos rows exist
+  // for this item, or for its placeholder slots); left free it behaves exactly
+  // as before.
+  const itemSize = (sel(pick(p, 'Size', 'Photo Size')) || 'medium').toLowerCase();
+  const perPhoto = photosFor(text(pick(p, 'Title', 'Name')));
+  let photos;
+  if (perPhoto) {
+    photos = perPhoto;
+  } else {
+    // Photos are uploaded into a Files column; the older text column of the same
+    // name only ever held "|| || ||" markers, which say how many photo slots the
+    // entry had on the original site, so it is kept as the placeholder count.
+    const legacy = await allImages(pick(p, 'Files', 'Photos', 'Photo', 'Images'), page.id + ':photos');
+    photos = legacy.map((src) => ({ src, size: itemSize }));
+  }
   const slots = photos.length || Math.min(6, text(pick(p, 'Slots', 'Photos')).split('||').length);
-  // "Size" controls how large each thumbnail in the row is allowed to grow;
-  // left free (no Size column yet) it behaves exactly as before.
-  const size = (sel(pick(p, 'Size', 'Photo Size')) || 'medium').toLowerCase();
   gallery.push({
     order, title,
     year: text(pick(p, 'Year')),
     body: html(pick(p, 'Body', 'Description')),
     layout: (sel(pick(p, 'Layout')) || 'center').toLowerCase(),
-    size: ['small', 'medium', 'large'].includes(size) ? size : 'medium',
+    size: SIZES.includes(itemSize) ? itemSize : 'medium',
     photos, slots,
   });
 }
