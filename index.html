@@ -90,6 +90,21 @@
   .ph-photo{aspect-ratio:3/4;}
   .ph-sq{aspect-ratio:4/3;}
 
+  /* width/align presets, driven by Notion's Width/Align (or Size) columns —
+     applied to a <figure> wrapper, so the placeholder box scales with it too */
+  .imgw-small{max-width:40%;}
+  .imgw-medium{max-width:65%;}
+  .imgw-large{max-width:85%;}
+  .imgw-full{max-width:100%;}
+  .imga-left{margin-left:0;margin-right:auto;}
+  .imga-center{margin-left:auto;margin-right:auto;}
+  .imga-right{margin-left:auto;margin-right:0;}
+
+  /* gallery thumbnail size, driven by Notion's Size column */
+  .gshots-small{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
+  .gshots-medium{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+  .gshots-large{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+
   /* ---------- research ---------- */
   .ov-sub{text-align:center;font-family:var(--body-serif);font-style:italic;color:var(--green);
           font-size:clamp(15px,2vw,19px);line-height:1.5;margin:0 0 26px;}
@@ -247,6 +262,12 @@
     return '<div class="ph-box ' + phcls + '">' + (label || 'image') + '</div>';
   }
 
+  /** class="" for a <figure>, from a Notion Width/Align choice (defaults: full, center). */
+  function figStyle(style){
+    var w = (style && style.width) || 'full', a = (style && style.align) || 'center';
+    return ' class="imgw-' + esc(w) + ' imga-' + esc(a) + '"';
+  }
+
   /* ---- chrome ---- */
   function renderChrome(){
     var cur = route();
@@ -290,7 +311,7 @@
       '<div class="band"><h2>' + rich(s.home_welcome) + '</h2></div>' +
       '<div class="wrap">' +
         '<p class="intro">' + rich(s.home_intro) + '</p>' +
-        '<figure>' + img(s.home_figure, '', 'ph-flow', 'overview figure') + '</figure>' +
+        '<figure' + figStyle(s.home_figure_style) + '>' + img(s.home_figure, '', 'ph-flow', 'overview figure') + '</figure>' +
       '</div>' +
       '<div class="band"><h2>' + rich(s.contacts_title || 'Contacts') + '</h2></div>' +
       '<div class="wrap"><div class="contacts">' +
@@ -307,7 +328,7 @@
         (r.overview_title ? '<h2 style="text-align:center;font-family:var(--serif);color:var(--green);font-size:clamp(21px,2.8vw,29px);margin:6px 0 10px;">' +
           rich(r.overview_title) + '</h2>' : '') +
         (r.overview_sub ? '<p class="ov-sub">' + rich(r.overview_sub) + '</p>' : '') +
-        (r.overview_figure ? '<figure>' + img(r.overview_figure, '', 'ph-fig', 'overview figure') + '</figure>' : '') +
+        (r.overview_figure ? '<figure' + figStyle(r.overview_figure_style) + '>' + img(r.overview_figure, '', 'ph-fig', 'overview figure') + '</figure>' : '') +
         (r.intro ? '<p class="r-body" style="margin-top:26px;">' + rich(r.intro) + '</p>' : '') +
         (r.topics || []).map(function(t){
           var fig = '<figure>' + img(t.figure, '', t.layout === 'side' ? 'ph-sq' : 'ph-fig', t.hint || 'figure') + '</figure>';
@@ -433,7 +454,7 @@
       '<div class="wrap wide">' + (items.length ? items.map(function(g){
         var slots = Math.max(1, Math.min(6, Number(g.slots) || 1));
         var srcs = (g.photos && g.photos.length) ? g.photos : new Array(slots).join(',').split(',');
-        var shots = '<div class="gshots">' + srcs.map(function(src){
+        var shots = '<div class="gshots gshots-' + esc(g.size || 'medium') + '">' + srcs.map(function(src){
           return img(src, '', 'ph-sq', 'photo');
         }).join('') + '</div>';
         var cap = '<div class="cap">' +
