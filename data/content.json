@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T04:37:54.708Z",
+ "generated": "2026-09-17T08:18:23.459Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -16,6 +16,11 @@
   "home_welcome": "Welcome to the KANG Lab!",
   "home_intro": "The Synthetic Biology and Bioprocess Engineering Lab at Kyung Hee University (KHU) engineers microorganisms into cell factories for sustainable biomanufacturing. Our work runs along three connected lines. First, we build the foundational tools that make conventional and non-conventional hosts — bacteria, yeasts, microalgae, marine protists, and methanotrophs — as tractable as model organisms, developing synthetic biology tools. Second, we apply metabolic engineering to convert renewable carbon — CO2, methane, methanol, and lignocellulosic sugars — into various bioproducts: industrial chemicals and fuels (white biotechnology), pharmaceuticals and nutraceuticals (red biotechnology), and food and feed materials (green biotechnology). Third, we are building an AI-driven, automated design–build–test–learn platform, so that strain development becomes a data-driven and increasingly self-directed process rather than a manual one. Together these efforts aim at bioprocesses that are not only environmentally sound but economically competitive.",
   "home_figure": "assets/img/4a61025af9ab.jpg",
+  "home_figure_style": {
+   "src": "assets/img/4a61025af9ab.jpg",
+   "width": "full",
+   "align": "center"
+  },
   "contacts_title": "Contacts",
   "contacts_lines": [
    "We are seeking undergrads, grad students (MS/Ph.D), researchers, and post-docs.",
@@ -34,6 +39,11 @@
   "overview_title": "Research Overview",
   "overview_sub": "",
   "overview_figure": "",
+  "overview_figure_style": {
+   "src": "",
+   "width": "full",
+   "align": "center"
+  },
   "intro": "",
   "topics": [
    {
@@ -251,9 +261,16 @@
    "year": "",
    "body": "<b>Hyunjun</b><br>Congratulations on your graduation!",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/685ed45fb4ae.png",
-    "assets/img/9d44c0094c22.png"
+    {
+     "src": "assets/img/685ed45fb4ae.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/9d44c0094c22.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -262,10 +279,20 @@
    "year": "",
    "body": "",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/27c4ff08c67c.jpg",
-    "assets/img/3c2f4d9251a7.png",
-    "assets/img/29d4e59eb6ad.png"
+    {
+     "src": "assets/img/27c4ff08c67c.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/3c2f4d9251a7.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/29d4e59eb6ad.png",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -274,9 +301,16 @@
    "year": "2026",
    "body": "We had a great time with the lab members to celebrate the festival. 🎊",
    "layout": "left",
+   "size": "medium",
    "photos": [
-    "assets/img/58fb9572045f.png",
-    "assets/img/3074e7e19f05.png"
+    {
+     "src": "assets/img/58fb9572045f.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/3074e7e19f05.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -285,10 +319,20 @@
    "year": "",
    "body": "We attended the conference and presented posters.<br>Jiwoo received an award at the poster presentation session.",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/4ccce3fed262.png",
-    "assets/img/8b2243fdfb16.png",
-    "assets/img/a1050e44af85.png"
+    {
+     "src": "assets/img/4ccce3fed262.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/8b2243fdfb16.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/a1050e44af85.png",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -297,9 +341,16 @@
    "year": "",
    "body": "<b>Yejin, Yujung, and Yejee</b><br>Congratulations on your graduation!<br><br><b>Ayoung and Youngrak</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/09cc441d8750.png",
-    "assets/img/e8834cd9f294.png"
+    {
+     "src": "assets/img/09cc441d8750.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/e8834cd9f294.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -308,9 +359,16 @@
    "year": "2026",
    "body": "to our one and only Professor :&gt;",
    "layout": "left",
+   "size": "medium",
    "photos": [
-    "assets/img/f8b6f0fb81d2.png",
-    "assets/img/5daeff6207e0.png"
+    {
+     "src": "assets/img/f8b6f0fb81d2.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/5daeff6207e0.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -319,9 +377,16 @@
    "year": "",
    "body": "Jiwoo presented research on Yeast-Derived Vitamin A Production System at the 2nd Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "left",
+   "size": "medium",
    "photos": [
-    "assets/img/0448b6cc38be.png",
-    "assets/img/dad4fc08d16e.png"
+    {
+     "src": "assets/img/0448b6cc38be.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/dad4fc08d16e.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -330,12 +395,28 @@
    "year": "",
    "body": "We attended the conference and presented posters. Yejin delivered a 3-minute poster presentation and Jiwoo received an award at the poster presentation session.",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/858b84c2e873.jpg",
-    "assets/img/49f7d3be56bb.jpg",
-    "assets/img/2a50427fb403.jpg",
-    "assets/img/648b571939e5.jpg",
-    "assets/img/d656b12e5d3f.jpg"
+    {
+     "src": "assets/img/858b84c2e873.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/49f7d3be56bb.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/2a50427fb403.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/648b571939e5.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/d656b12e5d3f.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 5
   },
@@ -344,10 +425,20 @@
    "year": "",
    "body": "Daeun presented research on eco-friendly plastics at the 1st Symposium on 2025 Functional Hybrid Materials Program.",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/4fa6afbdcdbe.png",
-    "assets/img/79c2140c2603.jpg",
-    "assets/img/41baa52ffedd.jpg"
+    {
+     "src": "assets/img/4fa6afbdcdbe.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/79c2140c2603.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/41baa52ffedd.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -356,10 +447,20 @@
    "year": "",
    "body": "",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/4b6bb2139e17.png",
-    "assets/img/e77becdd4b9c.png",
-    "assets/img/4e9567cd1ae0.png"
+    {
+     "src": "assets/img/4b6bb2139e17.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/e77becdd4b9c.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/4e9567cd1ae0.png",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -368,8 +469,12 @@
    "year": "",
    "body": "<b>Seunghyun</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
+   "size": "medium",
    "photos": [
-    "assets/img/07de6ffe34f9.png"
+    {
+     "src": "assets/img/07de6ffe34f9.png",
+     "size": "medium"
+    }
    ],
    "slots": 1
   },
@@ -378,9 +483,16 @@
    "year": "",
    "body": "<b>Daeun and Jiwoo</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "left",
+   "size": "medium",
    "photos": [
-    "assets/img/29dacebbee14.jpg",
-    "assets/img/fdeb5ef0fa6d.jpg"
+    {
+     "src": "assets/img/29dacebbee14.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/fdeb5ef0fa6d.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -389,10 +501,20 @@
    "year": "",
    "body": "",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/07785cc210f4.jpg",
-    "assets/img/fc3b8e92b040.jpg",
-    "assets/img/72535bf1c72b.jpg"
+    {
+     "src": "assets/img/07785cc210f4.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/fc3b8e92b040.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/72535bf1c72b.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -401,6 +523,7 @@
    "year": "2024",
    "body": "to our one and only Professor :&gt;",
    "layout": "left",
+   "size": "medium",
    "photos": [],
    "slots": 2
   },
@@ -409,11 +532,24 @@
    "year": "",
    "body": "We had a great time with the lab members to celebrate the fall festival. 🍂",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/2f1248f97cea.png",
-    "assets/img/a3b4b469b05f.png",
-    "assets/img/cc6ed003b7b8.png",
-    "assets/img/d3953a98da7b.png"
+    {
+     "src": "assets/img/2f1248f97cea.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/a3b4b469b05f.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/cc6ed003b7b8.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/d3953a98da7b.png",
+     "size": "medium"
+    }
    ],
    "slots": 4
   },
@@ -422,9 +558,16 @@
    "year": "",
    "body": "Yujung, Yejee, and Yejin attended the conference and presented posters.",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/66f13ba9c817.png",
-    "assets/img/e6c0682653e9.png"
+    {
+     "src": "assets/img/66f13ba9c817.png",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/e6c0682653e9.png",
+     "size": "medium"
+    }
    ],
    "slots": 2
   },
@@ -433,8 +576,12 @@
    "year": "",
    "body": "We had a great time with the lab members to celebrate the spring festival. 🍂",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/cc4aeac7ef28.jpg"
+    {
+     "src": "assets/img/cc4aeac7ef28.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 1
   },
@@ -443,10 +590,20 @@
    "year": "",
    "body": "<b>Yejin, Yejee, and Yujung</b><br>Congratulations on your undergraduate graduation!<br>Welcome to the KANG lab!",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/a3f7151a7273.jpg",
-    "assets/img/f75058973ac3.jpg",
-    "assets/img/92945203db42.png"
+    {
+     "src": "assets/img/a3f7151a7273.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/f75058973ac3.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/92945203db42.png",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -455,10 +612,20 @@
    "year": "",
    "body": "",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/097de893eb57.jpg",
-    "assets/img/aa881456552b.jpg",
-    "assets/img/1d84814f1b50.jpg"
+    {
+     "src": "assets/img/097de893eb57.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/aa881456552b.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/1d84814f1b50.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 3
   },
@@ -467,13 +634,35 @@
    "year": "",
    "body": "",
    "layout": "center",
+   "size": "medium",
    "photos": [
-    "assets/img/71c9be0a89c4.jpg",
-    "assets/img/eef1528f4d5c.jpg",
-    "assets/img/d8107929f484.jpg",
-    "assets/img/5798ff6cc5fa.jpg"
+    {
+     "src": "assets/img/71c9be0a89c4.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/eef1528f4d5c.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/d8107929f484.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/5798ff6cc5fa.jpg",
+     "size": "medium"
+    }
    ],
    "slots": 4
+  },
+  {
+   "title": "",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "size": "medium",
+   "photos": [],
+   "slots": 1
   }
  ]
 }
