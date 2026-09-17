@@ -100,11 +100,6 @@
   .imga-center{margin-left:auto;margin-right:auto;}
   .imga-right{margin-left:auto;margin-right:0;}
 
-  /* gallery thumbnail size, driven by Notion's Size column */
-  .gshots-small{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
-  .gshots-medium{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
-  .gshots-large{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-
   /* ---------- research ---------- */
   .ov-sub{text-align:center;font-family:var(--body-serif);font-style:italic;color:var(--green);
           font-size:clamp(15px,2vw,19px);line-height:1.5;margin:0 0 26px;}
@@ -188,7 +183,16 @@
   .gitem.left .row{grid-template-columns:minmax(0,2fr) minmax(0,1fr);}
   .gitem.center .row{grid-template-columns:1fr;}
   @media (max-width:800px){ .gitem.left .row{grid-template-columns:1fr;} }
-  .gshots{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+  /* photos flow left-to-right and wrap; each photo picks its own width via a
+     gph-* class, so a gallery item can mix small and large photos in one row */
+  .gshots{display:flex;flex-wrap:wrap;gap:14px;}
+  .gph{flex:0 1 auto;}
+  .gph .ph-box, .gph img{width:100%;}
+  .gph-small{width:140px;}
+  .gph-medium{width:220px;}
+  .gph-large{width:340px;}
+  .gph-full{width:100%;}
+  @media (max-width:520px){ .gph-medium, .gph-large{width:100%;} }
   .gitem h3{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:20px;}
   .gitem .yr{font-family:var(--serif);font-weight:700;font-size:20px;margin:0;}
   .gitem .ttl{color:var(--red);}
@@ -453,9 +457,15 @@
     return banner('gallery', 'Gallery') +
       '<div class="wrap wide">' + (items.length ? items.map(function(g){
         var slots = Math.max(1, Math.min(6, Number(g.slots) || 1));
-        var srcs = (g.photos && g.photos.length) ? g.photos : new Array(slots).join(',').split(',');
-        var shots = '<div class="gshots gshots-' + esc(g.size || 'medium') + '">' + srcs.map(function(src){
-          return img(src, '', 'ph-sq', 'photo');
+        var photos = (g.photos && g.photos.length) ? g.photos : (function(){
+          var a = []; for (var i = 0; i < slots; i++) a.push(null); return a;
+        })();
+        // each photo carries its own {src, size} — one row per photo in Notion's
+        // "Gallery Photos" table, or the item's own Size for a legacy/placeholder entry
+        var shots = '<div class="gshots">' + photos.map(function(ph){
+          var size = (ph && ph.size) || g.size || 'medium';
+          var src = ph ? ph.src : '';
+          return '<div class="gph gph-' + esc(size) + '">' + img(src, '', 'ph-sq', 'photo') + '</div>';
         }).join('') + '</div>';
         var cap = '<div class="cap">' +
           (g.year ? '<p class="yr">' + rich(g.year) + '</p>' : '') +
