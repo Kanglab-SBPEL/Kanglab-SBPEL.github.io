@@ -17,6 +17,14 @@
  * import works exactly like the matching Number / Select / Date / Checkbox
  * column, so no property types have to be converted by hand.
  *
+ * Image size / placement (all optional Select columns — leave them out and
+ * nothing changes):
+ *   SBPEL Gallery, "Size"            Small / Medium / Large  (thumbnail size)
+ *   SBPEL Site, "Width" (or "Size")  Small / Medium / Large / Full
+ *   SBPEL Site, "Align"              Left / Center / Right
+ *     Width/Align only affect the home_figure and research_overview_figure
+ *     rows — banners and the logo always fill their fixed frame.
+ *
  * Environment: NOTION_TOKEN (required), NOTION_DATABASE_ID (optional fallback
  * for the publications database), NOTION_VERSION (default 2022-06-28).
  */
@@ -420,11 +428,15 @@ for (const page of await rowsOf(ID.gallery, 'gallery')) {
   // entry had on the original site, so it is kept as the placeholder count.
   const photos = await allImages(pick(p, 'Files', 'Photos', 'Photo', 'Images'), page.id + ':photos');
   const slots = photos.length || Math.min(6, text(pick(p, 'Slots', 'Photos')).split('||').length);
+  // "Size" controls how large each thumbnail in the row is allowed to grow;
+  // left free (no Size column yet) it behaves exactly as before.
+  const size = (sel(pick(p, 'Size', 'Photo Size')) || 'medium').toLowerCase();
   gallery.push({
     order, title,
     year: text(pick(p, 'Year')),
     body: html(pick(p, 'Body', 'Description')),
     layout: (sel(pick(p, 'Layout')) || 'center').toLowerCase(),
+    size: ['small', 'medium', 'large'].includes(size) ? size : 'medium',
     photos, slots,
   });
 }
@@ -436,15 +448,28 @@ for (const page of await rowsOf(ID.site, 'site')) {
   const p = page.properties || {};
   const key = text(pick(p, 'Key', 'Name', 'Title'));
   if (!key) continue;
+  // "Width" / "Align" only matter for rows that carry an inline figure (home_figure,
+  // research_overview_figure); banners and the logo ignore them and keep filling
+  // their fixed frame, so leaving these columns blank changes nothing for those rows.
+  const width = (sel(pick(p, 'Width', 'Size')) || 'full').toLowerCase();
+  const align = (sel(pick(p, 'Align', 'Alignment')) || 'center').toLowerCase();
   S[key] = {
     text: html(pick(p, 'Text', 'Value')),
     plain: text(pick(p, 'Text', 'Value')),
     image: await firstImage(pick(p, 'Image', 'File', 'Photo'), page.id + ':image'),
+    width: ['small', 'medium', 'large', 'full'].includes(width) ? width : 'full',
+    align: ['left', 'center', 'right'].includes(align) ? align : 'center',
   };
 }
 const sv  = (k, d = '') => (S[k] ? (S[k].text || S[k].image || d) : d);
 const sim = (k) => (S[k] ? (S[k].image || S[k].plain || '') : '');
 const sls = (k) => (S[k] ? S[k].text.split(/\s*\|\|\s*/).map((s) => s.trim()).filter(Boolean) : []);
+/** Image URL plus its Width/Align choice, for the figures allowed to resize. */
+const sfig = (k, fallbackSrc) => {
+  const row = S[k];
+  const src = (row && row.image) || fallbackSrc || '';
+  return { src, width: (row && row.width) || 'full', align: (row && row.align) || 'center' };
+};
 
 const content = {
   generated: new Date().toISOString(),
@@ -462,7 +487,8 @@ const content = {
     home_intro: sv('home_intro'),
     // the figure is normally on the home_figure row, but an image dropped on
     // the home_intro row is meant for the same slot, so accept either
-    home_figure: sim('home_figure') || (S.home_intro ? S.home_intro.image : ''),
+    home_figure: sfig('home_figure', S.home_intro ? S.home_intro.image : '').src,
+    home_figure_style: sfig('home_figure', S.home_intro ? S.home_intro.image : ''),
     contacts_title: sv('contacts_title', 'Contacts'),
     contacts_lines: sls('contacts_lines'),
     footer_lines: sls('footer_lines'),
@@ -471,6 +497,7 @@ const content = {
     overview_title: sv('research_overview_title', 'Research Overview'),
     overview_sub: sv('research_overview_sub'),
     overview_figure: sim('research_overview_figure'),
+    overview_figure_style: sfig('research_overview_figure'),
     intro: sv('research_intro'),
     topics: topics.map(({ order, ...t }) => t),
   },
