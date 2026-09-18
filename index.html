@@ -183,21 +183,35 @@
   .gitem.left .row{grid-template-columns:minmax(0,2fr) minmax(0,1fr);}
   .gitem.center .row{grid-template-columns:1fr;}
   @media (max-width:800px){ .gitem.left .row{grid-template-columns:1fr;} }
-  /* photos flow left-to-right and wrap; each photo picks its own width via a
-     gph-* class, so a gallery item can mix small and large photos in one row */
-  .gshots{display:flex;flex-wrap:wrap;gap:14px;}
-  .gph{flex:0 1 auto;}
+  /* photos flow left-to-right and wrap, and grow to fill the row (like the old
+     grid did) rather than leaving a gap — a gph-* class only sets each photo's
+     share of that stretch, so a Large photo ends up wider than a Small one
+     without ever leaving empty space at the end of a row */
+  .gshots{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;}
+  .gph{flex-shrink:1;min-width:120px;}
   .gph .ph-box, .gph img{width:100%;}
-  .gph-small{width:140px;}
-  .gph-medium{width:220px;}
-  .gph-large{width:340px;}
-  .gph-full{width:100%;}
-  @media (max-width:520px){ .gph-medium, .gph-large{width:100%;} }
+  /* real photos come in whatever shape they were taken in (portrait, wide,
+     square...) — cropping every one to the same 4:3 box is what makes a row
+     of them read as one tidy set instead of a jumble of different heights */
+  .gph img{aspect-ratio:4/3;object-fit:cover;border-radius:2px;}
+  .gph-small{flex:1 1 140px;max-width:200px;}
+  .gph-medium{flex:2 1 200px;max-width:340px;}
+  .gph-large{flex:3 1 280px;max-width:520px;}
+  .gph-full{flex:1 1 100%;max-width:100%;}
+  @media (max-width:520px){ .gph{flex-basis:100%;max-width:100%;} }
   .gitem h3{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:20px;}
   .gitem .yr{font-family:var(--serif);font-weight:700;font-size:20px;margin:0;}
   .gitem .ttl{color:var(--red);}
   .gitem p{font-size:13.5px;line-height:1.7;margin:8px 0 0;}
   .gitem.center .cap{text-align:center;margin-bottom:16px;}
+  /* Gallery Blocks: a Google-Sites-style content stack — photo and text
+     blocks, one under another, each block picking its own width (imgw-*) via
+     the same Small/Medium/Large/Full scale used for the site's own figures */
+  .gitem.stacked .cap{text-align:center;margin-bottom:16px;}
+  .gstack{display:flex;flex-direction:column;align-items:center;gap:18px;}
+  .gstack figure{margin:0;}
+  .gstack img{border-radius:2px;}
+  .gtext{font-size:13.5px;line-height:1.7;text-align:left;}
 
   /* ---------- footer ---------- */
   footer{border-top:1px solid var(--rule);}
@@ -456,21 +470,33 @@
     var items = C.gallery || [];
     return banner('gallery', 'Gallery') +
       '<div class="wrap wide">' + (items.length ? items.map(function(g){
+        var cap = '<div class="cap">' +
+          (g.year ? '<p class="yr">' + rich(g.year) + '</p>' : '') +
+          (g.title ? '<h3 class="ttl">' + rich(g.title) + '</h3>' : '') +
+          (g.body ? '<p>' + rich(g.body) + '</p>' : '') + '</div>';
+
+        // an item with rows in Notion's "Gallery Blocks" table renders as a
+        // Google-Sites-style stack: photo and text blocks, top to bottom, each
+        // at its own Width — this replaces the row-of-photos layout entirely
+        if (g.blocks && g.blocks.length) {
+          var stack = '<div class="gstack">' + g.blocks.map(function(b){
+            if (b.type === 'text') return '<p class="gtext imgw-' + esc(b.width) + ' imga-center">' + rich(b.text) + '</p>';
+            return '<figure class="imgw-' + esc(b.width) + ' imga-center">' + img(b.src, '', 'ph-fig', 'photo') + '</figure>';
+          }).join('') + '</div>';
+          return '<section class="gitem stacked">' + cap + stack + '</section>';
+        }
+
         var slots = Math.max(1, Math.min(6, Number(g.slots) || 1));
         var photos = (g.photos && g.photos.length) ? g.photos : (function(){
           var a = []; for (var i = 0; i < slots; i++) a.push(null); return a;
         })();
-        // each photo carries its own {src, size} — one row per photo in Notion's
-        // "Gallery Photos" table, or the item's own Size for a legacy/placeholder entry
+        // each photo carries its own {src, size} — from a legacy Files column
+        // (all photos share the item's Size), or empty placeholder slots
         var shots = '<div class="gshots">' + photos.map(function(ph){
           var size = (ph && ph.size) || g.size || 'medium';
           var src = ph ? ph.src : '';
           return '<div class="gph gph-' + esc(size) + '">' + img(src, '', 'ph-sq', 'photo') + '</div>';
         }).join('') + '</div>';
-        var cap = '<div class="cap">' +
-          (g.year ? '<p class="yr">' + rich(g.year) + '</p>' : '') +
-          (g.title ? '<h3 class="ttl">' + rich(g.title) + '</h3>' : '') +
-          (g.body ? '<p>' + rich(g.body) + '</p>' : '') + '</div>';
         return '<section class="gitem ' + (g.layout === 'left' ? 'left' : 'center') + '">' +
           (g.layout === 'left' ? '<div class="row">' + shots + cap + '</div>'
                                : cap + '<div class="row">' + shots + '</div>') +
