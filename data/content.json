@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T21:14:09.985Z",
+ "generated": "2026-09-18T04:22:59.036Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -272,7 +272,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "2026 Kang Lab MT 🏖",
@@ -294,7 +295,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "ADELANTE",
@@ -312,7 +314,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "2026 Spring KSBB",
@@ -334,7 +337,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "2026 Winter Commencement 🎓",
@@ -352,7 +356,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "Happy Birthday! 🎂",
@@ -370,7 +375,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "2025 2nd Symposium of the Functional Hybrid Materials Program",
@@ -388,7 +394,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "KSBB-AFOB Conference 2025",
@@ -418,7 +425,8 @@
      "size": "medium"
     }
    ],
-   "slots": 5
+   "slots": 5,
+   "blocks": null
   },
   {
    "title": "2025 1st Symposium of the Functional Hybrid Materials Program",
@@ -440,7 +448,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "2025 Kang Lab MT 🏕",
@@ -462,7 +471,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "2025 Summer Commencement 🎓",
@@ -476,7 +486,8 @@
      "size": "medium"
     }
    ],
-   "slots": 1
+   "slots": 1,
+   "blocks": null
   },
   {
    "title": "2025 Winter Commencement 🎓",
@@ -494,7 +505,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "Useless Gift Exchange : Christmas 2024",
@@ -516,7 +528,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "Happy Birthday! 🎂",
@@ -525,7 +538,8 @@
    "layout": "left",
    "size": "medium",
    "photos": [],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "2024 ADELANTE Fall Festival",
@@ -551,7 +565,8 @@
      "size": "medium"
     }
    ],
-   "slots": 4
+   "slots": 4,
+   "blocks": null
   },
   {
    "title": "2024 Fall KSBB",
@@ -569,7 +584,8 @@
      "size": "medium"
     }
    ],
-   "slots": 2
+   "slots": 2,
+   "blocks": null
   },
   {
    "title": "2024 ADELANTE Spring Festival",
@@ -583,7 +599,8 @@
      "size": "medium"
     }
    ],
-   "slots": 1
+   "slots": 1,
+   "blocks": null
   },
   {
    "title": "2024 Winter Commencement 🎓",
@@ -605,7 +622,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "2023 Fall KSBB",
@@ -627,7 +645,8 @@
      "size": "medium"
     }
    ],
-   "slots": 3
+   "slots": 3,
+   "blocks": null
   },
   {
    "title": "2023 C1 Gas Refinery Symposium",
@@ -653,7 +672,8 @@
      "size": "medium"
     }
    ],
-   "slots": 4
+   "slots": 4,
+   "blocks": null
   },
   {
    "title": "",
@@ -662,7 +682,8 @@
    "layout": "center",
    "size": "medium",
    "photos": [],
-   "slots": 1
+   "slots": 1,
+   "blocks": null
   }
  ]
 }
