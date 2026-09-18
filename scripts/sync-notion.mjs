@@ -442,6 +442,17 @@ topics.sort((a, b) => a.order - b.order);
 /* ---- gallery blocks (optional: a Google-Sites-style content block list —
    one row per block, Photo or Text, stacked top to bottom) ---- */
 const SIZES = ['small', 'medium', 'large', 'full'];
+/** Matching key for a Gallery Item title: case/space-insensitive, and blind to
+ *  emoji — the same title is usually retyped (not copy-pasted) into the
+ *  Gallery Blocks table, and an emoji that looks identical often isn't the
+ *  same code points (variation selectors, skin-tone modifiers, etc.), which
+ *  would otherwise make an exact string match silently fail. */
+const normTitle = (s) =>
+  (s || '')
+    .replace(/\p{Extended_Pictographic}|️|‍/gu, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
 const blockRows = [];
 for (const page of await rowsOf(ID.galleryBlocks, 'gallery blocks')) {
   const p = page.properties || {};
@@ -454,23 +465,24 @@ for (const page of await rowsOf(ID.galleryBlocks, 'gallery blocks')) {
     const t = html(pick(p, 'Text', 'Body'));
     if (!t) continue;
     blockRows.push({
-      parent: parent.trim().toLowerCase(), order,
+      parent: normTitle(parent), order,
       block: { type: 'text', text: t, width: SIZES.includes(width) ? width : 'full' },
     });
   } else {
     const src = await firstImage(pick(p, 'Photo', 'Image', 'File', 'Files'), page.id + ':block');
     if (!src) continue;
     blockRows.push({
-      parent: parent.trim().toLowerCase(), order,
+      parent: normTitle(parent), order,
       block: { type: 'photo', src, width: SIZES.includes(width) ? width : 'full' },
     });
   }
 }
+console.log(`  gallery blocks: filed under [${[...new Set(blockRows.map((r) => r.parent))].join(' | ')}]`);
 /** This gallery item's content blocks in top-to-bottom order, or null when the
  *  Gallery Blocks table has nothing filed under its title — the caller then
  *  falls back to the item's own Files column, rendered the old row-of-photos way. */
 function blocksFor(title) {
-  const key = title.trim().toLowerCase();
+  const key = normTitle(title);
   const rows = blockRows.filter((r) => r.parent === key);
   if (!rows.length) return null;
   return rows.sort((a, b) => a.order - b.order).map((r) => r.block);
