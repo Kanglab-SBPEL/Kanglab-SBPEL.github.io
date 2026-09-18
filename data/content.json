@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T06:52:34.595Z",
+ "generated": "2026-09-18T07:04:50.409Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -457,22 +457,30 @@
    "body": "",
    "layout": "center",
    "size": "medium",
-   "photos": [
-    {
-     "src": "assets/img/4b6bb2139e17.png",
-     "size": "medium"
-    },
-    {
-     "src": "assets/img/e77becdd4b9c.png",
-     "size": "medium"
-    },
-    {
-     "src": "assets/img/4e9567cd1ae0.png",
-     "size": "medium"
-    }
-   ],
+   "photos": [],
    "slots": 3,
-   "blocks": null
+   "blocks": [
+    {
+     "type": "photo",
+     "src": "assets/img/ea920e96e753.png",
+     "width": "medium"
+    },
+    {
+     "type": "photo",
+     "src": "assets/img/d176ce39aa11.png",
+     "width": "medium"
+    },
+    {
+     "type": "photo",
+     "src": "assets/img/00b96d9f16dc.png",
+     "width": "medium"
+    },
+    {
+     "type": "text",
+     "text": "Hello",
+     "width": "medium"
+    }
+   ]
   },
   {
    "title": "2025 Summer Commencement 🎓",
