@@ -302,9 +302,14 @@ const BATCH_MS = 6 * 60 * 60 * 1000;
 
 function locate(kind, ...words) {
   const live = dbs.filter((d) => !ARCHIVED(d));
-  const byTitle = live.filter((d) => words.every((w) => d.title.toLowerCase().includes(w)));
+  // "SBPEL Gallery Blocks" shares the word "gallery" with "SBPEL Gallery", so
+  // without this it can look like a second, newer copy of the gallery table
+  // itself and trip the "keep only the newest" rule below, wrongly hiding the
+  // real one — excluded here for every kind except the blocks table's own lookup.
+  const scope = kind === 'galleryBlocks' ? live : live.filter((d) => !SIGNATURE.galleryBlocks(d.cols));
+  const byTitle = scope.filter((d) => words.every((w) => d.title.toLowerCase().includes(w)));
   const test = SIGNATURE[kind];
-  const bySig = test ? live.filter((d) => test(d.cols)) : [];
+  const bySig = test ? scope.filter((d) => test(d.cols)) : [];
   const hits = [...new Set([...byTitle, ...bySig])];
   if (hits.length < 2) return hits.map((d) => d.id);
   hits.sort((a, b) => String(b.created).localeCompare(String(a.created)));
