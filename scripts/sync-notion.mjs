@@ -11,7 +11,7 @@
  *   SBPEL People         →  content.people
  *   SBPEL Research       →  content.research.topics
  *   SBPEL Gallery        →  content.gallery
- *   SBPEL Gallery Photos →  content.gallery[].photos  (optional, see below)
+ *   SBPEL Gallery Blocks →  content.gallery[].blocks  (optional, see below)
  *   SBPEL Site           →  content.site  +  research overview fields
  *
  * Every property is read tolerantly: a column left as plain Text after a CSV
@@ -21,13 +21,16 @@
  * Image size / placement (all optional Select columns — leave them out and
  * nothing changes):
  *   SBPEL Gallery, "Size"            Small / Medium / Large  (fallback size for
- *                                    an item's photos when it has no rows below)
- *   SBPEL Gallery Photos             One row per photo, so each photo in a
- *                                    gallery item can have its own size/order:
+ *                                    an item's photos when it has no Blocks below)
+ *   SBPEL Gallery Blocks             One row per block (photo or text), stacked
+ *                                    top to bottom — the Google-Sites-style
+ *                                    "content block list" for a gallery item:
  *     "Gallery Item"  (Text)         must match a Gallery item's Title exactly
- *     "Photo"         (Files&media)  the image
- *     "Size"          (Select)       Small / Medium / Large / Full
- *     "Order"         (Number)       left-to-right position among that item's photos
+ *     "Type"          (Select)       Photo / Text
+ *     "Photo"         (Files&media)  the image (Type = Photo)
+ *     "Text"          (Text)         the paragraph (Type = Text)
+ *     "Width"         (Select)       Small / Medium / Large / Full
+ *     "Order"         (Number)       top-to-bottom position in the stack
  *   SBPEL Site, "Width" (or "Size")  Small / Medium / Large / Full
  *   SBPEL Site, "Align"              Left / Center / Right
  *     Width/Align only affect the home_figure and research_overview_figure
@@ -287,7 +290,7 @@ const SIGNATURE = {
   people:       (c) => c.has('group') && (c.has('role') || c.has('info')),
   research:     (c) => c.has('layout') && c.has('body') && !c.has('photos'),
   gallery:      (c) => c.has('photos') || (c.has('layout') && c.has('year') && c.has('body')),
-  galleryPhotos:(c) => c.has('gallery item') && (c.has('photo') || c.has('image') || c.has('file')),
+  galleryBlocks:(c) => c.has('gallery item') && c.has('type') && (c.has('photo') || c.has('text')),
   site:         (c) => c.has('key') && (c.has('text') || c.has('image')),
 };
 
@@ -321,19 +324,19 @@ const ID = {
   people:        locate('people', 'people'),
   research:      locate('research', 'research'),
   gallery:       locate('gallery', 'gallery'),
-  galleryPhotos: locate('galleryPhotos', 'gallery', 'photo'),
+  galleryBlocks: locate('galleryBlocks', 'gallery', 'block'),
   site:          locate('site', 'site'),
 };
 if (!ID.publications.length && fallback) ID.publications = [fallback];
 // a table can only belong to one kind: publications wins over the looser signatures
-for (const k of ['people', 'research', 'gallery', 'galleryPhotos', 'site']) {
+for (const k of ['people', 'research', 'gallery', 'galleryBlocks', 'site']) {
   ID[k] = ID[k].filter((id) => !ID.publications.includes(id));
 }
 ID.research = ID.research.filter((id) => !ID.gallery.includes(id));
-// "SBPEL Gallery Photos" title contains "gallery" too, so it can be picked up
+// "SBPEL Gallery Blocks" title contains "gallery" too, so it can be picked up
 // by both locate() calls above — whichever table actually looks like the
-// per-photo one (has a "Gallery Item" column) keeps it, not the item table.
-ID.gallery = ID.gallery.filter((id) => !ID.galleryPhotos.includes(id));
+// per-block one (has a "Gallery Item" column) keeps it, not the item table.
+ID.gallery = ID.gallery.filter((id) => !ID.galleryBlocks.includes(id));
 
 async function rowsOf(ids, label) {
   if (!ids || !ids.length) { console.log(`  (no ${label} database found — skipping)`); return []; }
@@ -431,30 +434,41 @@ for (const page of await rowsOf(ID.research, 'research')) {
 }
 topics.sort((a, b) => a.order - b.order);
 
-/* ---- gallery photos (optional: one row per photo, for per-photo size/order) ---- */
+/* ---- gallery blocks (optional: a Google-Sites-style content block list —
+   one row per block, Photo or Text, stacked top to bottom) ---- */
 const SIZES = ['small', 'medium', 'large', 'full'];
-const photoRows = [];
-for (const page of await rowsOf(ID.galleryPhotos, 'gallery photos')) {
+const blockRows = [];
+for (const page of await rowsOf(ID.galleryBlocks, 'gallery blocks')) {
   const p = page.properties || {};
-  const parent = text(pick(p, 'Gallery Item', 'Gallery', 'Item', 'Title', 'Name'));
-  const src = await firstImage(pick(p, 'Photo', 'Image', 'File', 'Files'), page.id + ':photo');
-  if (!parent || !src) continue;
-  const size = (sel(pick(p, 'Size')) || 'medium').toLowerCase();
-  photoRows.push({
-    parent: parent.trim().toLowerCase(),
-    src,
-    size: SIZES.includes(size) ? size : 'medium',
-    order: num(pick(p, 'Order')) ?? 999,
-  });
+  const parent = text(pick(p, 'Gallery Item', 'Gallery', 'Item'));
+  if (!parent) continue;
+  const order = num(pick(p, 'Order')) ?? 999;
+  const width = (sel(pick(p, 'Width', 'Size')) || '').toLowerCase();
+  const type = (sel(pick(p, 'Type')) || 'photo').toLowerCase();
+  if (type === 'text') {
+    const t = html(pick(p, 'Text', 'Body'));
+    if (!t) continue;
+    blockRows.push({
+      parent: parent.trim().toLowerCase(), order,
+      block: { type: 'text', text: t, width: SIZES.includes(width) ? width : 'full' },
+    });
+  } else {
+    const src = await firstImage(pick(p, 'Photo', 'Image', 'File', 'Files'), page.id + ':block');
+    if (!src) continue;
+    blockRows.push({
+      parent: parent.trim().toLowerCase(), order,
+      block: { type: 'photo', src, width: SIZES.includes(width) ? width : 'full' },
+    });
+  }
 }
-/** Photos filed under this gallery item's title in the Gallery Photos table,
- *  each carrying its own size — or null when that table has nothing for it,
- *  so the caller falls back to the item's own Files column. */
-function photosFor(title) {
+/** This gallery item's content blocks in top-to-bottom order, or null when the
+ *  Gallery Blocks table has nothing filed under its title — the caller then
+ *  falls back to the item's own Files column, rendered the old row-of-photos way. */
+function blocksFor(title) {
   const key = title.trim().toLowerCase();
-  const rows = photoRows.filter((r) => r.parent === key);
+  const rows = blockRows.filter((r) => r.parent === key);
   if (!rows.length) return null;
-  return rows.sort((a, b) => a.order - b.order).map((r) => ({ src: r.src, size: r.size }));
+  return rows.sort((a, b) => a.order - b.order).map((r) => r.block);
 }
 
 /* ---- gallery ---- */
@@ -462,16 +476,14 @@ const gallery = [];
 for (const page of await rowsOf(ID.gallery, 'gallery')) {
   const p = page.properties || {};
   const title = html(pick(p, 'Title', 'Name'));
+  const itemTitle = text(pick(p, 'Title', 'Name'));
   const order = num(pick(p, 'Order')) ?? 999;
-  // "Size" is the item-level fallback (used when no Gallery Photos rows exist
-  // for this item, or for its placeholder slots); left free it behaves exactly
-  // as before.
+  // "Size" is the legacy-row fallback (used only when this item has no Gallery
+  // Blocks rows); left free it behaves exactly as before.
   const itemSize = (sel(pick(p, 'Size', 'Photo Size')) || 'medium').toLowerCase();
-  const perPhoto = photosFor(text(pick(p, 'Title', 'Name')));
-  let photos;
-  if (perPhoto) {
-    photos = perPhoto;
-  } else {
+  const blocks = blocksFor(itemTitle);
+  let photos = [];
+  if (!blocks) {
     // Photos are uploaded into a Files column; the older text column of the same
     // name only ever held "|| || ||" markers, which say how many photo slots the
     // entry had on the original site, so it is kept as the placeholder count.
@@ -485,7 +497,7 @@ for (const page of await rowsOf(ID.gallery, 'gallery')) {
     body: html(pick(p, 'Body', 'Description')),
     layout: (sel(pick(p, 'Layout')) || 'center').toLowerCase(),
     size: SIZES.includes(itemSize) ? itemSize : 'medium',
-    photos, slots,
+    photos, slots, blocks,
   });
 }
 gallery.sort((a, b) => a.order - b.order);
