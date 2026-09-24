@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T11:33:36.180Z",
+ "generated": "2026-09-24T17:00:14.660Z",
  "source": "notion",
  "counts": {
   "news": 4,
@@ -623,7 +623,7 @@
    "authors": "Yejee Park, Tisa Rani Saha, Jiwoo Kwon, Sangdo Yook, Eun Yeol Lee*, <b>Nam Kyu Kang*</b>",
    "journal": "Journal of Biological Engineering",
    "citation": "Accepted",
-   "doi": "",
+   "doi": "10.1186/s13036-026-00757-3",
    "url": "",
    "tag": "research"
   },
@@ -634,8 +634,8 @@
    "title": "Engineering the Acid-Tolerant Yeast <i>Issatchenkia orientalis</i> for Efficient Lactic Acid Production via Optimized Glucose and Xylose Utilization",
    "authors": "Yejin Lin, Ayoung Kim, Daeun Lee, <b>Nam Kyu Kang*</b>",
    "journal": "Frontiers in Microbiology",
-   "citation": "Accepted",
-   "doi": "",
+   "citation": "17 (2026)",
+   "doi": "10.3389/fmicb.2026.1951033",
    "url": "",
    "tag": "research"
   }
