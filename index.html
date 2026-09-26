@@ -187,16 +187,17 @@
      grid did) rather than leaving a gap — a gph-* class only sets each photo's
      share of that stretch, so a Large photo ends up wider than a Small one
      without ever leaving empty space at the end of a row */
-  .gshots{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;}
-  .gph{flex-shrink:1;min-width:120px;}
+  .gshots{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;justify-content:center;}
+  .gph{--ar:1.3333;flex:var(--ar) 1 calc(var(--ar) * 190px);min-width:90px;max-width:calc(var(--ar) * 420px);}
   .gph .ph-box, .gph img{width:100%;}
+  .gph .ph-box{aspect-ratio:var(--ar);}
   /* real photos come in whatever shape they were taken in (portrait, wide,
      square...) — cropping every one to the same 4:3 box is what makes a row
      of them read as one tidy set instead of a jumble of different heights */
-  .gph img{aspect-ratio:4/3;object-fit:cover;border-radius:2px;}
-  .gph-small{flex:1 1 140px;max-width:200px;}
-  .gph-medium{flex:2 1 200px;max-width:340px;}
-  .gph-large{flex:3 1 280px;max-width:520px;}
+  .gph img{display:block;height:auto;aspect-ratio:var(--ar);object-fit:cover;border-radius:2px;}
+  .gph-small{max-width:calc(var(--ar) * 240px);}
+  .gph-medium{max-width:calc(var(--ar) * 340px);}
+  .gph-large{max-width:calc(var(--ar) * 460px);}
   .gph-full{flex:1 1 100%;max-width:100%;}
   @media (max-width:520px){ .gph{flex-basis:100%;max-width:100%;} }
   .gitem h3{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:20px;}
@@ -553,5 +554,6 @@
    });
 })();
 </script>
+<script>(function(){var t=0;function setAR(i){var p=i.closest&&i.closest(".gph");if(p&&i.naturalWidth&&i.naturalHeight){p.style.setProperty("--ar",(i.naturalWidth/i.naturalHeight).toFixed(4));}}function sweep(){var l=document.querySelectorAll(".gph img"),k;for(k=0;k<l.length;k++){if(l[k].complete&&l[k].naturalWidth){setAR(l[k]);}}}function q(){if(!t){t=requestAnimationFrame(function(){t=0;sweep();});}}document.addEventListener("load",function(e){if(e.target&&e.target.tagName==="IMG"){setAR(e.target);}},true);document.addEventListener("DOMContentLoaded",q);window.addEventListener("load",q);if(window.MutationObserver){new MutationObserver(q).observe(document.documentElement,{childList:true,subtree:true});}})();</script>
 </body>
 </html>
