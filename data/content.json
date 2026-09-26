@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T11:52:13.144Z",
+ "generated": "2026-09-26T13:53:23.801Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -509,21 +509,6 @@
    "blocks": null
   },
   {
-   "title": "Useless Gift Exchange : Christmas 2024",
-   "year": "",
-   "body": "",
-   "layout": "center",
-   "size": "medium",
-   "photos": [
-    {
-     "src": "assets/img/07785cc210f4.jpg",
-     "size": "medium"
-    }
-   ],
-   "slots": 1,
-   "blocks": null
-  },
-  {
    "title": "Happy Birthday! 🎂",
    "year": "2025",
    "body": "to our one and only Professor :&gt;",
@@ -540,6 +525,21 @@
     }
    ],
    "slots": 2,
+   "blocks": null
+  },
+  {
+   "title": "Useless Gift Exchange : Christmas 2024",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "size": "medium",
+   "photos": [
+    {
+     "src": "assets/img/07785cc210f4.jpg",
+     "size": "medium"
+    }
+   ],
+   "slots": 1,
    "blocks": null
   },
   {
