@@ -118,8 +118,10 @@ async function queryAll(id) {
 
 const parts = (p) => p?.rich_text || p?.title || [];
 
-/** Rich text → HTML, keeping italic / bold written in Notion. */
-function html(p) {
+/** Rich text → HTML, keeping italic / bold written in Notion.
+ *  html(p, { bold: false }) drops the bold: a publication title is styled by the
+ *  site itself, so bold pasted in from a manuscript only ever looks like a slip. */
+function html(p, opt) {
   return parts(p)
     .map((t) => {
       let s = (t.plain_text || '');
@@ -129,7 +131,7 @@ function html(p) {
       if (!markup) s = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const a = t.annotations || {};
       if (a.italic) s = `<i>${s}</i>`;
-      if (a.bold) s = `<b>${s}</b>`;
+      if (a.bold && !(opt && opt.bold === false)) s = `<b>${s}</b>`;
       if (t.href) s = `<a href="${t.href}">${s}</a>`;
       return s;
     })
@@ -355,7 +357,7 @@ async function rowsOf(ids, label) {
 const pubItems = [];
 for (const page of await rowsOf(ID.publications, 'publications')) {
   const p = page.properties || {};
-  const title = html(pick(p, 'Title', 'Name'));
+  const title = html(pick(p, 'Title', 'Name'), { bold: false });
   if (!title) continue;
   const type = (sel(pick(p, 'Type', 'Category')) || 'Journal').toLowerCase();
   if (type === 'news') {
