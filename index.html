@@ -421,7 +421,13 @@
     }
     rows.sort(function(a, b){
       if ((Number(b.year)||0) !== (Number(a.year)||0)) return (Number(b.year)||0) - (Number(a.year)||0);
-      var ao = a.order == null ? 1e9 : Number(a.order), bo = b.order == null ? 1e9 : Number(b.order);
+      /* an empty Order means the newest paper of that year: it sorts above the
+         numbered rows, so adding one needs no renumbering; two empty ones keep
+         the order they have in the Notion table */
+      var ab = (a.order == null || a.order === ''), bb = (b.order == null || b.order === '');
+      if (ab && bb) return (Number(a.year)||0) ? ((a._i||0) - (b._i||0))
+                                               : String(a.title||'').localeCompare(String(b.title||''));
+      var ao = ab ? -1e9 : Number(a.order), bo = bb ? -1e9 : Number(b.order);
       if (ao !== bo) return ao - bo;
       return String(a.title||'').localeCompare(String(b.title||''));
     });
@@ -541,6 +547,7 @@
   function boot(content, pubs){
     C = content;
     PUBS = (pubs && pubs.items) || [];
+    PUBS.forEach(function(p, i){ p._i = i; });
     render();
   }
   Promise.all([
