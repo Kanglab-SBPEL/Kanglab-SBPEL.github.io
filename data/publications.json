@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-27T21:14:56.659Z",
+ "generated": "2026-09-28T00:30:32.337Z",
  "source": "notion",
  "counts": {
   "news": 4,
   "patent": 6,
-  "journal": 44
+  "journal": 45
  },
  "items": [
   {
@@ -110,6 +110,18 @@
    "doi": "",
    "url": "",
    "tag": ""
+  },
+  {
+   "type": "journal",
+   "year": 2026,
+   "order": null,
+   "title": "<b>Establishing </b><b><i>Yarrowia lipolytica </i></b><b>for aloesone biosynthesis through lipid-metabolism rewiring and carbon-source evaluation</b>",
+   "authors": "Tisa Rani Saha, Yejee Park, Jae Sang Han, Bang Yeon Hwang, Seon Gil Do, Qi Jia, <b>Nam Kyu Kang*</b>, Eun Yeol Lee*",
+   "journal": "Journal of Biological Engineering",
+   "citation": "",
+   "doi": "Accepted",
+   "url": "",
+   "tag": "research"
   },
   {
    "type": "journal",
