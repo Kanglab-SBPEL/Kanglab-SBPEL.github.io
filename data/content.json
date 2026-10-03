@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T05:01:14.804Z",
+ "generated": "2026-10-03T06:46:11.175Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -225,11 +225,15 @@
    },
    {
     "name": "Yujung  Choi",
-    "info": "Master / 2023.08-2026.02 "
+    "info": "Master / 2023.08-2026.02 / ZEROTH BIO researcher"
    },
    {
     "name": "Yejee Park",
     "info": "Master / 2023.01-2026.02 / KHU researcher"
+   },
+   {
+    "name": "Hyunjun Min",
+    "info": "Master / 2023.09-2026.09 / Ph.D student"
    }
   ],
   "former": [
