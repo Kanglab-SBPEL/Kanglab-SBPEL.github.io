@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T04:13:49.996Z",
+ "generated": "2026-10-16T11:11:44.756Z",
  "source": "notion",
  "site": {
   "short_name": "KANG LAB",
@@ -261,6 +261,25 @@
  },
  "gallery": [
   {
+   "title": " KSBB conference 2026 Fall",
+   "year": "",
+   "body": "We attended the conference and presented posters. Daeun and <b>Seunghyun</b> received an award at the poster presentation session.\n\n",
+   "layout": "center",
+   "size": "medium",
+   "photos": [
+    {
+     "src": "assets/img/0a2ea2866c6a.jpg",
+     "size": "medium"
+    },
+    {
+     "src": "assets/img/e0a04770466a.jpg",
+     "size": "medium"
+    }
+   ],
+   "slots": 2,
+   "blocks": null
+  },
+  {
    "title": "2026 Summer Commencement 🎓",
    "year": "",
    "body": "<b>Hyunjun</b><br>Congratulations on your graduation!",
@@ -513,6 +532,21 @@
    "blocks": null
   },
   {
+   "title": "Useless Gift Exchange : Christmas 2024",
+   "year": "",
+   "body": "",
+   "layout": "center",
+   "size": "medium",
+   "photos": [
+    {
+     "src": "assets/img/07785cc210f4.jpg",
+     "size": "medium"
+    }
+   ],
+   "slots": 1,
+   "blocks": null
+  },
+  {
    "title": "Happy Birthday! 🎂",
    "year": "2025",
    "body": "to our one and only Professor :&gt;",
@@ -529,21 +563,6 @@
     }
    ],
    "slots": 2,
-   "blocks": null
-  },
-  {
-   "title": "Useless Gift Exchange : Christmas 2024",
-   "year": "",
-   "body": "",
-   "layout": "center",
-   "size": "medium",
-   "photos": [
-    {
-     "src": "assets/img/07785cc210f4.jpg",
-     "size": "medium"
-    }
-   ],
-   "slots": 1,
    "blocks": null
   },
   {
